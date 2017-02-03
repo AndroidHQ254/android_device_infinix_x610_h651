@@ -58,6 +58,9 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := 
 endif
 
+# Memory Config
+MALLOC_SVELTE := true
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := x610,Infinix-X610,x610_h651
 
