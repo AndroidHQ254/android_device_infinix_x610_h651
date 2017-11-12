@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6763.rc \
     init.mt6763.usb.rc \
+    init.safailnet.rc \
     init.sensor_1_0.rc \
     fstab.mt6763 \
     ueventd.rc \
