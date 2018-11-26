@@ -855,7 +855,7 @@ vendor/lib64/libcurl_xcap_md.so
 vendor/lib64/libfile_op.so
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
-vendor/lib64/libmtk-ril.so
+vendor/lib64/libmtk-ril.so|688234cb10401836f7eb287e18dcb479
 vendor/lib64/libmtkconfig.so
 vendor/lib64/libmtkconfigutils.so
 vendor/lib64/libmtkcutils.so
