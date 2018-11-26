@@ -205,6 +205,7 @@ vendor/lib/libmtkhardware_legacy.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
 vendor/lib/libsysenv.so
+vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtkconfig.so
 vendor/lib64/libmtkconfigutils.so
 vendor/lib64/libmtkcutils.so
@@ -254,6 +255,7 @@ vendor/lib64/hw/sound_trigger.primary.mt6765.so
 
 # Thermal
 vendor/app/MTKThermalManager/MTKThermalManager.apk
+vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/bin/thermal
 vendor/bin/thermal_manager
 vendor/bin/thermalloadalgod
@@ -263,14 +265,13 @@ vendor/etc/.tp/.thermal_policy_03
 vendor/etc/.tp/.thermal_policy_05
 vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
+vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 vendor/etc/init/init.thermal.rc
 vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/hw/thermal.mt6765.so
 vendor/lib/libthermalalgo.so
 vendor/lib64/hw/thermal.mt6765.so
-vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
-vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
@@ -1033,7 +1034,6 @@ vendor/lib64/libmpbase.so
 vendor/lib64/libmrdumpv.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtcloader.so
-vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtk_drvb.so
 vendor/lib64/libmtkcam.eventcallback.so
 vendor/lib64/libmtkcam.featurepipe.capture.so
