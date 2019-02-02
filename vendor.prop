@@ -402,3 +402,6 @@ dalvik.vm.heaptargetutilization=0.75
 ro.tran_localechange_optimize=1
 dalvik.vm.dex2oat-threads=6
 persist.radio.lte.chip=0
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
