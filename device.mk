@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.x610_h651
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 

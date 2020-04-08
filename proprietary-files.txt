@@ -141,12 +141,6 @@ vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
 vendor/lib/hw/keystore.mt6765.so
 vendor/lib64/hw/keystore.mt6765.so
 
-# Light
-vendor/bin/hw/android.hardware.light@2.0-service-mediatek
-vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
-vendor/lib/hw/lights.mt6765.so
-vendor/lib64/hw/lights.mt6765.so
-
 # Media (OMX)
 lib/libmediaextractor.so
 lib/libstagefright_wfd_mtk.so
