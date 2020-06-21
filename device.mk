@@ -192,6 +192,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/powercontable.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.cfg \
     $(LOCAL_PATH)/configs/perf/powerscntbl.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.cfg
 
+# Properties
+-include $(LOCAL_PATH)/mtk_services_log.mk
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor
