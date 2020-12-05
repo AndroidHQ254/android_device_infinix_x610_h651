@@ -210,9 +210,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
-# Tethering
+# RRO overlay
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
+    TetheringConfigOverlay \
+    WifiOverlay
 
 # Thermal
 PRODUCT_PACKAGES += \
