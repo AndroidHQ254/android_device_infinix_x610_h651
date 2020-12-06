@@ -206,6 +206,9 @@ vendor/lib64/libsimaka.so|6ab8a6fbe383c3f2ac2a6c9935592884b2809950
 vendor/lib64/libstrongswan.so|677987afb4d45f2f7877cddae26c55ddbf575c6a
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so|e533ea132ecef2d7979f1f98983a3c337c01b410
 
+# IMS - from treble.phh.me
+-priv-app/ImsService/ImsService.apk|a2ea43af16be841005db332184fa444a98206e3b
+
 # Kernel-Modules
 vendor/lib/modules/bt_drv.ko
 vendor/lib/modules/fmradio_drv.ko
