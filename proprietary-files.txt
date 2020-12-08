@@ -307,15 +307,6 @@ lib/vndk-28/android.hardware.gnss@1.1.so
 lib64/vndk-28/android.hardware.gnss@1.0.so
 lib64/vndk-28/android.hardware.gnss@1.1.so
 
-# Health
-lib/vndk-28/android.hardware.health@1.0.so
-lib/vndk-28/android.hardware.health@2.0.so
-lib64/vndk-28/android.hardware.health@1.0.so
-lib64/vndk-28/android.hardware.health@2.0.so
-vendor/bin/hw/android.hardware.health@2.0-service
-vendor/bin/hw/android.hardware.health@2.0-service.override
-vendor/etc/init/android.hardware.health@2.0-service.rc
-
 # IR
 lib/vndk-28/android.hardware.ir@1.0.so
 lib64/vndk-28/android.hardware.ir@1.0.so
