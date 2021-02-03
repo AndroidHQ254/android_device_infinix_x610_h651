@@ -290,17 +290,13 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 
 # Gatekeeper
-lib/vndk-28/android.hardware.gatekeeper@1.0.so
-lib64/vndk-28/android.hardware.gatekeeper@1.0.so
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
-vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/hw/gatekeeper.mt6765.so
+vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/libimsg_log.so
 vendor/lib/libmtee.so
 vendor/lib/vendor.microtrust.hardware.capi@2.0.so
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/gatekeeper.mt6765.so
+vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libmtee.so
 vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
@@ -1009,7 +1005,6 @@ vendor/lib/hw/flp.default.so
 vendor/lib/hw/gps.default.so
 vendor/lib/hw/kmsetkey.default.so
 vendor/lib/hw/kmsetkey.mt6765.so
-vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/hw/swfingerprint.default.so
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
@@ -1160,7 +1155,6 @@ vendor/lib64/hw/flp.default.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/kmsetkey.mt6765.so
-vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/hw/swfingerprint.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
