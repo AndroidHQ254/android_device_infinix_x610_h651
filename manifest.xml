@@ -215,7 +215,6 @@
         <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
         <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
         <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
-        <fqname>@1.0::ILog/aee</fqname>
         <fqname>@1.0::ILog/default</fqname>
     </hal>
     <hal format="hidl">

@@ -81,7 +81,6 @@ PRODUCT_PACKAGES += \
     init.mt6765.rc \
     meta_init.rc \
     init.connectivity.rc \
-    init.aee.rc \
     ueventd.mt6765.rc \
     init.recovery.mt6765.rc \
 
