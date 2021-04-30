@@ -1,5 +1,17 @@
 # Device proprietary files - from full_x610_h651-user 9 PPR1.180610.011 31055 release-keys, unless pinned
 
+# AEE
+vendor/lib/libdirect-coredump.so
+vendor/lib64/libdirect-coredump.so
+
+# AEE - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2101131254:user/release-keys
+vendor/lib/libaedv.so|68eb76e22650e6f7b09f6c1db32a72851445789f
+vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
+vendor/lib/libudf.so|0910236ff7b602a7ee4b6cf5472b5cff0d301f52
+vendor/lib64/libaedv.so|bd09673530e80f6cde27d91229b6df6394191053
+vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
+vendor/lib64/libudf.so|00563b48abe3e19856133a87775363a9ef98c049
+
 # Audio
 lib/vndk-28/android.hardware.audio.common@2.0.so
 lib/vndk-28/android.hardware.audio.common@4.0.so
@@ -22,13 +34,11 @@ vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.r_submix.mt6765.so
 vendor/lib/hw/audio.usb.default.so
 vendor/lib/hw/audio.usb.mt6765.so
-vendor/lib/libaedv.so
 vendor/lib/libalsautils.so
 vendor/lib/libaudiocustparam_vendor.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libccci_util.so
 vendor/lib/libcustom_nvram.so
-vendor/lib/libladder.so
 vendor/lib/libnvram.so
 vendor/lib/libnvram_platform.so
 vendor/lib/libnvram_sec.so
@@ -42,13 +52,11 @@ vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mt6765.so
 vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/audio.usb.mt6765.so
-vendor/lib64/libaedv.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libaudiocustparam_vendor.so
 vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libccci_util.so
 vendor/lib64/libcustom_nvram.so
-vendor/lib64/libladder.so
 vendor/lib64/libnvram.so
 vendor/lib64/libnvram_platform.so
 vendor/lib64/libnvram_sec.so
@@ -1041,7 +1049,6 @@ vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
 vendor/lib/libcvsd_mtk.so
-vendor/lib/libdirect-coredump.so
 vendor/lib/libfgauge_gm30.so
 vendor/lib/libfpspolicy.so
 vendor/lib/libgeofence.so
@@ -1086,7 +1093,6 @@ vendor/lib/libstorage_otp.so
 vendor/lib/libstrongswan.so
 vendor/lib/libthermalalgo.so
 vendor/lib/libthha.so
-vendor/lib/libudf.so
 vendor/lib/libufwriter.so
 vendor/lib/libutinterface_custom_md.so
 vendor/lib/libutinterface_md.so
@@ -1263,7 +1269,6 @@ vendor/lib64/libcurl_xcap_md.so
 vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdcs_aesync.so
 vendor/lib64/libdenoise.so
-vendor/lib64/libdirect-coredump.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libem_camera_jni.so
 vendor/lib64/libfeature.face.so
@@ -1367,7 +1372,6 @@ vendor/lib64/libstrongswan.so
 vendor/lib64/libthha.so
 vendor/lib64/libtranlog.so
 vendor/lib64/libtranssion_beauty.so
-vendor/lib64/libudf.so
 vendor/lib64/libufwriter.so
 vendor/lib64/libundistort_64.so
 vendor/lib64/libutinterface_custom_md.so
