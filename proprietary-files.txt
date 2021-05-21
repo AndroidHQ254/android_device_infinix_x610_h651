@@ -313,14 +313,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Light
-lib/vndk-28/android.hardware.light@2.0.so
-lib64/vndk-28/android.hardware.light@2.0.so
-vendor/bin/hw/android.hardware.light@2.0-service-mediatek
-vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
-vendor/lib/hw/lights.mt6765.so
-vendor/lib64/hw/lights.mt6765.so
-
 # Local time
 vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
