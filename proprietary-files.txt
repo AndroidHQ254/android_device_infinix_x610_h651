@@ -844,7 +844,6 @@ vendor/lib/libmtkshifter_vendor.so
 vendor/lib/libmtksysutils.so
 vendor/lib/libssl-ss.so
 vendor/lib/libstorage_otp.so
-vendor/lib/libsysenv.so
 vendor/lib/libutinterface_custom_md.so
 vendor/lib/libutinterface_md.so
 vendor/lib64/libasn1c_core_vendor.so
@@ -875,7 +874,6 @@ vendor/lib64/libmtkutils.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librilfusion.so
 vendor/lib64/libssl-ss.so
-vendor/lib64/libsysenv.so
 vendor/lib64/libutinterface_custom_md.so
 vendor/lib64/libutinterface_md.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
@@ -891,6 +889,10 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.6.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
+
+# Radio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
+vendor/lib64/libsysenv.so|8faeff48161ab28d948256d543abdb2a8f08fa99
 
 # Radio (Configs)
 etc/apdb/APDB_MT6763_S01__W1921:vendor/etc/apdb/APDB_MT6763_S01__W1921
