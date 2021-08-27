@@ -506,20 +506,6 @@ lib64/vndk-28/android.hardware.usb@1.1.so
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
-# Vibrator
-lib/vndk-28/android.hardware.vibrator@1.0.so
-lib/vndk-28/android.hardware.vibrator@1.1.so
-lib/vndk-28/android.hardware.vibrator@1.2.so
-lib64/vndk-28/android.hardware.vibrator@1.0.so
-lib64/vndk-28/android.hardware.vibrator@1.1.so
-lib64/vndk-28/android.hardware.vibrator@1.2.so
-vendor/bin/hw/android.hardware.vibrator@1.0-service
-vendor/etc/init/android.hardware.vibrator@1.0-service.rc
-vendor/lib/hw/android.hardware.vibrator@1.0-impl.so
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so
-vendor/lib64/hw/vibrator.default.so
-
 # VR
 lib/vndk-28/android.hardware.vr@1.0.so
 lib64/vndk-28/android.hardware.vr@1.0.so
