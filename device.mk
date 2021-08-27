@@ -31,6 +31,14 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/ACCDET.kl \
     $(DEVICE_PATH)/configs/keylayout/mtk-kpd.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mtk-kpd.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+PRODUCT_PACKAGES += \
+    libkeymaster3.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.x610_h651
@@ -68,6 +76,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl \
     libwifi-hal
 
 # Inherit the proprietary files
