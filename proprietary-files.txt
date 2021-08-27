@@ -13,26 +13,11 @@ vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
 vendor/lib64/libudf.so|00563b48abe3e19856133a87775363a9ef98c049
 
 # Audio
-lib/vndk-28/android.hardware.audio.common@2.0.so
-lib/vndk-28/android.hardware.audio.common@4.0.so
-lib/vndk-28/android.hardware.audio.effect@2.0.so
-lib/vndk-28/android.hardware.audio.effect@4.0.so
-lib/vndk-28/android.hardware.audio@2.0.so
-lib/vndk-28/android.hardware.audio@4.0.so
-lib64/vndk-28/android.hardware.audio.common@2.0.so
-lib64/vndk-28/android.hardware.audio.common@4.0.so
-lib64/vndk-28/android.hardware.audio.effect@2.0.so
-lib64/vndk-28/android.hardware.audio.effect@4.0.so
-lib64/vndk-28/android.hardware.audio@2.0.so
-lib64/vndk-28/android.hardware.audio@4.0.so
 vendor/bin/hw/android.hardware.audio@4.0-service-mediatek
 vendor/etc/init/android.hardware.audio@4.0-service-mediatek.rc
 vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.mt6765.so
-vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.r_submix.mt6765.so
-vendor/lib/hw/audio.usb.default.so
 vendor/lib/hw/audio.usb.mt6765.so
 vendor/lib/libalsautils.so
 vendor/lib/libaudiocustparam_vendor.so
@@ -46,11 +31,8 @@ vendor/lib/libtinyxml.so
 vendor/lib/vendor.mediatek.hardware.audio@4.1.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mt6765.so
-vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mt6765.so
-vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/audio.usb.mt6765.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libaudiocustparam_vendor.so
@@ -464,12 +446,6 @@ vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
 # Soundtrigger
-lib/vndk-28/android.hardware.soundtrigger@2.0-core.so
-lib/vndk-28/android.hardware.soundtrigger@2.0.so
-lib/vndk-28/android.hardware.soundtrigger@2.1.so
-lib64/vndk-28/android.hardware.soundtrigger@2.0-core.so
-lib64/vndk-28/android.hardware.soundtrigger@2.0.so
-lib64/vndk-28/android.hardware.soundtrigger@2.1.so
 vendor/lib/hw/sound_trigger.primary.mt6765.so
 vendor/lib64/hw/sound_trigger.primary.mt6765.so
 
