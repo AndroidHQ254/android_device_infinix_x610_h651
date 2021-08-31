@@ -950,19 +950,15 @@ vendor/lib64/libsensorndkbridge.so
 
 # Thermal
 -vendor/app/MTKThermalManager/MTKThermalManager.apk
-vendor/bin/hw/android.hardware.thermal@1.0-service
 vendor/bin/thermal
 vendor/bin/thermal_manager
 vendor/bin/thermalloadalgod
-vendor/etc/init/android.hardware.thermal@1.0-service.rc
 vendor/etc/init/init.thermal.rc
 vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
-vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/thermal.mt6763.so
 vendor/lib/libmtcloader.so
 vendor/lib/libthermalalgo.so
-vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/hw/thermal.mt6763.so
 vendor/lib64/libmtcloader.so
 
