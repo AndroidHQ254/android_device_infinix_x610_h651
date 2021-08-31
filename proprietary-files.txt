@@ -448,15 +448,21 @@ lib64/vndk-28/android.hardware.tetheroffload.config@1.0.so
 lib64/vndk-28/android.hardware.tetheroffload.control@1.0.so
 
 # Thermal
-lib/vndk-28/android.hardware.thermal@1.0.so
-lib/vndk-28/android.hardware.thermal@1.1.so
-lib64/vndk-28/android.hardware.thermal@1.0.so
-lib64/vndk-28/android.hardware.thermal@1.1.so
-vendor/bin/hw/android.hardware.thermal@1.0-service
-vendor/etc/init/android.hardware.thermal@1.0-service.rc
-vendor/lib/hw/android.hardware.thermal@1.0-impl.so
+vendor/app/MTKThermalManager/MTKThermalManager.apk
+vendor/bin/thermal
+vendor/bin/thermal_manager
+vendor/bin/thermalloadalgod
+vendor/etc/.tp/.ht120.mtc
+vendor/etc/.tp/.thermal_policy_00
+vendor/etc/.tp/.thermal_policy_03
+vendor/etc/.tp/.thermal_policy_05
+vendor/etc/.tp/thermal.conf
+vendor/etc/.tp/thermal.off.conf
+vendor/etc/init/init.thermal.rc
+vendor/etc/init/init.thermal_manager.rc
+vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/hw/thermal.mt6765.so
-vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib/libthermalalgo.so
 vendor/lib64/hw/thermal.mt6765.so
 
 # TV
@@ -504,7 +510,6 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 # Miscellaneous
 vendor/app/EmCamera/lib/arm64/libem_camera_jni.so
 vendor/app/EmCamera/EmCamera.apk
-vendor/app/MTKThermalManager/MTKThermalManager.apk
 vendor/bin/hw/camerahalserver
 vendor/bin/hw/power_native_test_v_2_0
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
@@ -556,9 +561,6 @@ vendor/bin/rttv
 vendor/bin/starter
 vendor/bin/stroke
 vendor/bin/teei_daemon
-vendor/bin/thermal
-vendor/bin/thermal_manager
-vendor/bin/thermalloadalgod
 vendor/bin/tranlog
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
@@ -573,12 +575,6 @@ vendor/bin/wmt_loader
 vendor/bin/wmt_loopback
 vendor/data/misc/ProjectConfig.mk
 vendor/data/misc/pdc.txt
-vendor/etc/.tp/.ht120.mtc
-vendor/etc/.tp/.thermal_policy_00
-vendor/etc/.tp/.thermal_policy_03
-vendor/etc/.tp/.thermal_policy_05
-vendor/etc/.tp/thermal.conf
-vendor/etc/.tp/thermal.off.conf
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
@@ -694,9 +690,6 @@ vendor/etc/init/init.fmradio_drv.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.md_apps.rc
 vendor/etc/init/init.pnpmgr.rc
-vendor/etc/init/init.thermal.rc
-vendor/etc/init/init.thermal_manager.rc
-vendor/etc/init/init.thermalloadalgod.rc
 vendor/etc/init/init.tranlog.rc
 vendor/etc/init/init.volte_imcb.rc
 vendor/etc/init/init.volte_imsm_93.rc
@@ -1059,7 +1052,6 @@ vendor/lib/libspeechparser_vendor.so
 vendor/lib/libssl-ss.so
 vendor/lib/libstorage_otp.so
 vendor/lib/libstrongswan.so
-vendor/lib/libthermalalgo.so
 vendor/lib/libthha.so
 vendor/lib/libufwriter.so
 vendor/lib/libutinterface_custom_md.so
