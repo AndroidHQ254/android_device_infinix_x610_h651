@@ -712,7 +712,7 @@ vendor/lib/libMtkOmxG711Dec.so
 vendor/lib/libMtkOmxGsmDec.so
 vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libMtkOmxRawDec.so
-vendor/lib/libMtkOmxVdecEx.so
+vendor/lib/libMtkOmxVdecEx.so|dd26da2c43d43d3847dc60ac21e91efaee5a092f
 vendor/lib/libMtkOmxVenc.so
 vendor/lib/libMtkOmxVorbisEnc.so
 vendor/lib/libstagefrighthw.so
