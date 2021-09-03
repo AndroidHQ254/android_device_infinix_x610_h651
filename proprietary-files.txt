@@ -204,6 +204,22 @@ vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
+# OMX
+vendor/etc/mtk_omx_core.cfg
+vendor/lib/libMtkOmxAdpcmDec.so
+vendor/lib/libMtkOmxAdpcmEnc.so
+vendor/lib/libMtkOmxAlacDec.so
+vendor/lib/libMtkOmxApeDec.so
+vendor/lib/libMtkOmxCore.so
+vendor/lib/libMtkOmxG711Dec.so
+vendor/lib/libMtkOmxGsmDec.so
+vendor/lib/libMtkOmxMp3Dec.so
+vendor/lib/libMtkOmxRawDec.so
+vendor/lib/libMtkOmxVdecEx.so
+vendor/lib/libMtkOmxVenc.so
+vendor/lib/libMtkOmxVorbisEnc.so
+vendor/lib64/libMtkOmxCore.so
+
 # Power
 vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
@@ -690,7 +706,6 @@ vendor/etc/megviisegment_model
 vendor/etc/memory_config.xml
 vendor/etc/mkshrc
 vendor/etc/model_mdl_cache
-vendor/etc/mtk_omx_core.cfg
 vendor/etc/partition_permission.sh
 vendor/etc/pnpmgr.db
 vendor/etc/power_whitelist_cfg.xml
@@ -747,18 +762,6 @@ vendor/lib/libDR.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
 vendor/lib/libJpgDecPipe.so
 vendor/lib/libJpgEncPipe.so
-vendor/lib/libMtkOmxAdpcmDec.so
-vendor/lib/libMtkOmxAdpcmEnc.so
-vendor/lib/libMtkOmxAlacDec.so
-vendor/lib/libMtkOmxApeDec.so
-vendor/lib/libMtkOmxCore.so
-vendor/lib/libMtkOmxG711Dec.so
-vendor/lib/libMtkOmxGsmDec.so
-vendor/lib/libMtkOmxMp3Dec.so
-vendor/lib/libMtkOmxRawDec.so
-vendor/lib/libMtkOmxVdecEx.so
-vendor/lib/libMtkOmxVenc.so
-vendor/lib/libMtkOmxVorbisEnc.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/libOpenCL.so
 vendor/lib/libPVROCL.so
@@ -911,7 +914,6 @@ vendor/lib64/libBnMtkCodec.so
 vendor/lib64/libCheckLeak.so
 vendor/lib64/libImageEval.so
 vendor/lib64/libJpgEncPipe.so
-vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libMtkSImage.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/libOpenCL.so
