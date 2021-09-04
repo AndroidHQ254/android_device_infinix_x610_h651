@@ -364,11 +364,16 @@ vendor/lib/libthermalalgo.so
 vendor/lib64/hw/thermal.mt6765.so
 
 # Wi-Fi
+-framework/mtk-wifi-service.jar
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
+vendor/bin/hostapd_cli
 vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc
+vendor/etc/init/hostapd.android.rc
+vendor/lib/libwpa_client.so
 vendor/lib64/libwifi-hal.so
+vendor/lib64/libwpa_client.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 
@@ -527,7 +532,6 @@ vendor/etc/init/bootperf.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/em_hidl_user.rc
 vendor/etc/init/gsm0710muxd.rc
-vendor/etc/init/hostapd.android.rc
 vendor/etc/init/init.bip.rc
 vendor/etc/init/init.bringup_monitor.rc
 vendor/etc/init/init.bt_drv.rc
@@ -882,7 +886,6 @@ vendor/lib/libvp8dec_sa.ca7.so
 vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwo.so
-vendor/lib/libwpa_client.so
 vendor/lib/s5k3p9sp_mipi_raw_tuning.so
 vendor/lib/s5k3p9spb_mipi_raw_tuning.so
 vendor/lib/s5k3p9sx_mipi_raw_tuning.so
@@ -1146,7 +1149,6 @@ vendor/lib64/libwa_rtdof.so
 vendor/lib64/libwestalgo_cal.so
 vendor/lib64/libwifitest.so
 vendor/lib64/libwo.so
-vendor/lib64/libwpa_client.so
 vendor/lib64/s5k3p9sp_mipi_raw_IdxMgr.so
 vendor/lib64/s5k3p9sp_mipi_raw_tuning.so
 vendor/lib64/s5k3p9spb_mipi_raw_IdxMgr.so
