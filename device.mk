@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
