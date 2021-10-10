@@ -9,7 +9,7 @@ $(call inherit-product, vendor/infinix/x610_h651/x610_h651-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@4.0 \
+    android.hardware.audio@4.0.vendor \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
