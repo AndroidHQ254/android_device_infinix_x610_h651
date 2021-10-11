@@ -10,6 +10,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.common@4.0-util \
     android.hardware.audio.effect@4.0-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
