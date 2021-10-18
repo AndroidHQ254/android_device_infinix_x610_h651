@@ -43,6 +43,10 @@ vendor/lib64/libtinyxml.so
 vendor/lib64/vendor.mediatek.hardware.audio@4.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
+# Audio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+vendor/lib/libtinyxml.so|db901f50b694ec5791932685466ceafbd64567a5
+vendor/lib64/libtinyxml.so|b9f9790bd8704bb8d1aebc6ee78a125f7023d925
+
 # Audio (FX modules)
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libdynproc.so
