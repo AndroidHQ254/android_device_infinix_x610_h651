@@ -223,6 +223,9 @@
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
+    <!-- Exempt ImsService from privacy (location) indicators -->
+    <string name="config_systemAudioIntelligence" translatable="false">com.mediatek.ims</string>
+
     <!-- empheral resolver packages -->
     <string-array name="config_ephemeralResolverPackage">
         <item>com.google.android.gms</item>
