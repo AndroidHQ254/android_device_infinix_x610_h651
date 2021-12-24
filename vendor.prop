@@ -1,7 +1,4 @@
-ro.config.ringtone=BeatPlucker.ogg
-ro.config.notification_sound=pizzicato.ogg
 ro.carrier=unknown
-ro.config.alarm_alert=Alarm_Classic.ogg
 ro.dalvik.vm.native.bridge=0
 ro.mediatek.chip_ver=S01
 ro.mediatek.platform=MT6763
