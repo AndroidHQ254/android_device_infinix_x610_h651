@@ -8,6 +8,18 @@
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@4.0-impl \
+    audio.a2dp.default \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    libalsautils \
+    libdynproc \
+    libtinycompress \
+    libtinyxml
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
