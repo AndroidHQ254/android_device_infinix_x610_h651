@@ -646,7 +646,7 @@ vendor/lib64/libverno.so
 vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
-# IMS - from treble.phh.me
+# IMS - from treble.phh.me (android 12)
 -priv-app/ImsService/ImsService.apk|a2ea43af16be841005db332184fa444a98206e3b
 
 # Jpeg
