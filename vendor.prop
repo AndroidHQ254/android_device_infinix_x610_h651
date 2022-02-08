@@ -163,3 +163,4 @@ persist.radio.lte.chip=0
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec=0
+ro.config.vc_call_vol_steps=7
