@@ -211,6 +211,7 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     fstab.mt6763 \
     ueventd.rc \
+    set_zram.sh \
     partition_permission.sh \
     throttle.sh
 
