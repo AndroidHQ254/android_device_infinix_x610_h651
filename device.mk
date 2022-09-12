@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.umidigi
+    android.hardware.light-service.umidigi_mt6763
 
 # Media
 PRODUCT_COPY_FILES += \
