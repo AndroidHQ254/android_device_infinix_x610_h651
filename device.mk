@@ -81,9 +81,6 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.device@3.2.vendor \
-    android.hardware.camera.device@3.3.vendor \
-    android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
@@ -281,32 +278,10 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi@1.0 \
-    android.hardware.wifi@1.0.vendor \
-    android.hardware.wifi@1.1 \
-    android.hardware.wifi@1.1.vendor \
-    android.hardware.wifi@1.2 \
-    android.hardware.wifi@1.2.vendor \
-    android.hardware.wifi@1.3 \
-    android.hardware.wifi@1.3.vendor \
     android.hardware.wifi@1.4 \
     android.hardware.wifi@1.4.vendor \
-    android.hardware.wifi.supplicant@1.0 \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1 \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2 \
-    android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.supplicant@1.3 \
     android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.0 \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1 \
-    android.hardware.wifi.hostapd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.2 \
-    android.hardware.wifi.hostapd@1.2.vendor \
     android.hardware.wifi.hostapd@1.3 \
     android.hardware.wifi.hostapd@1.3.vendor
 
