@@ -14,7 +14,6 @@ PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
     android.hardware.soundtrigger@2.1-impl \
-    android.hardware.soundtrigger@2.1 \
     android.hardware.soundtrigger@2.1.vendor \
     audio.a2dp.default \
     audio.bluetooth.default \
@@ -70,7 +69,6 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
 # Cgroup and task_profiles
@@ -80,9 +78,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.device@3.5.vendor \
-    android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
 
 # Display
@@ -278,11 +274,8 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.4 \
     android.hardware.wifi@1.4.vendor \
-    android.hardware.wifi.supplicant@1.3 \
     android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.3 \
     android.hardware.wifi.hostapd@1.3.vendor
 
 PRODUCT_PACKAGES += \
