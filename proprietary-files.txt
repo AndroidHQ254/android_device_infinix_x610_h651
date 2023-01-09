@@ -630,21 +630,17 @@ vendor/etc/security/cacerts_supl/f336e3d1.0
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/gatekeeper.itrusty.so
 vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib64/hw/gatekeeper.default.so
 vendor/lib64/hw/gatekeeper.itrusty.so
 vendor/lib64/hw/libSoftGatekeeper.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/vulkan.mt6763.so
 vendor/lib/libOpenCL.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/vulkan.mt6763.so
 vendor/lib64/libOpenCL.so
 
 # Health
