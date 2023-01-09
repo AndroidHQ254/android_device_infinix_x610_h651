@@ -1026,14 +1026,6 @@ vendor/lib64/libtrusty.so
 vendor/thh/ta/0401c03fc30c4dd00000000000000104.ta
 vendor/thh/ta/TAs_list
 
-# Vibrator
-vendor/bin/hw/android.hardware.vibrator@1.0-service
-vendor/etc/init/android.hardware.vibrator@1.0-service.rc
-vendor/lib/hw/android.hardware.vibrator@1.0-impl.so
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/android.hardware.vibrator@1.0-impl.so
-vendor/lib64/hw/vibrator.default.so
-
 # USB
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
