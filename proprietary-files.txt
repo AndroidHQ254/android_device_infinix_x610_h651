@@ -671,10 +671,6 @@ vendor/lib/modules/wlan_drv_gen2.ko
 vendor/lib/modules/wmt_chrdev_wifi.ko
 vendor/lib/modules/wmt_drv.ko
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.mt6763.so
-vendor/lib64/hw/sound_trigger.primary.mt6763.so
-
 # Media
 vendor/lib/libBnMtkCodec.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
