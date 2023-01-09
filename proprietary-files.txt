@@ -1068,13 +1068,11 @@ vendor/etc/init/mtk_agpsd.rc
 vendor/etc/aee-config
 vendor/etc/ams_aal_config.xml
 vendor/etc/config.yaml
-vendor/etc/partition_permission.sh
 vendor/etc/pildc.cfg
 vendor/etc/power_whitelist_cfg.xml
 vendor/etc/powercontable.cfg
 vendor/etc/powerscntbl.cfg
 vendor/etc/sw_config.xml
-vendor/etc/throttle.sh
 vendor/lib/libmrdumpv.so
 vendor/lib/libxapi_undistort.so
 vendor/lib64/libmemsic.so

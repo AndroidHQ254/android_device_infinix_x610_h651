@@ -114,7 +114,9 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     multi_init.rc \
     fstab.mt6763 \
-    ueventd.rc
+    ueventd.rc \
+    partition_permission.sh \
+    throttle.sh
 
 # Seccomp
 PRODUCT_COPY_FILES += \
