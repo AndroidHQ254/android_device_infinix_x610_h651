@@ -1035,6 +1035,4 @@ vendor/lib64/libxapi_undistort.so
 # Mediatek
 vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_mediatek_video.xml
 vendor/lib64/vendor.mediatek.hardware.log@1.0.so
