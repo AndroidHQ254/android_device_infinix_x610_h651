@@ -1008,11 +1008,6 @@ vendor/bin/meta_tst
 vendor/bin/wmt_concurrency
 vendor/bin/wmt_fdb
 vendor/bin/wmt_loopback
-vendor/etc/init/init.bt_drv.rc
-vendor/etc/init/init.fmradio_drv.rc
-vendor/etc/init/init.gps_drv.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/mtk_agpsd.rc
 vendor/etc/ams_aal_config.xml
