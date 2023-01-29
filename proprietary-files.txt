@@ -78,6 +78,10 @@ vendor/lib64/hw/audio.primary.mt6763.so
 vendor/lib64/hw/audio.r_submix.mt6763.so
 vendor/lib64/hw/audio.usb.mt6763.so
 
+# Audio-Hardware (Prebuild)
+lib/android.hardware.audio.common-util.so:vendor/lib/android.hardware.audio.common-util.so
+lib64/android.hardware.audio.common-util.so:vendor/lib64/android.hardware.audio.common-util.so
+
 # Audio-Hardware (HIDL)
 vendor/bin/hw/android.hardware.audio@4.0-service-mediatek
 vendor/etc/init/android.hardware.audio@4.0-service-mediatek.rc
