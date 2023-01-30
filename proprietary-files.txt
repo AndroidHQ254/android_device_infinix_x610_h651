@@ -1010,13 +1010,11 @@ vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 vendor/bin/hw/power_native_test_v_2_0
 vendor/bin/factory
 vendor/bin/istorageproxyd
-vendor/bin/loghidlvendorservice
 vendor/bin/memsicp
 vendor/bin/meta_tst
 vendor/bin/wmt_concurrency
 vendor/bin/wmt_fdb
 vendor/bin/wmt_loopback
-vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/mtk_agpsd.rc
 vendor/etc/ams_aal_config.xml
 vendor/etc/config.yaml
@@ -1031,8 +1029,3 @@ vendor/lib64/libui_ext.so
 vendor/lib64/libxapi_bokeh.so
 vendor/lib64/libxapi_preview.so
 vendor/lib64/libxapi_undistort.so
-
-# Mediatek
-vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
-vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
-vendor/lib64/vendor.mediatek.hardware.log@1.0.so
