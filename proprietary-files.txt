@@ -617,7 +617,6 @@ vendor/bin/epdg_wod
 vendor/bin/muxreport
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
-vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
 vendor/bin/wfca
