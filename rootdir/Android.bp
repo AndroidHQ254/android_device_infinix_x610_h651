@@ -7,22 +7,8 @@
 // Init scripts
 // Init configuration files
 prebuilt_etc {
-    name: "meta_init.project.rc",
-    src: "etc/meta_init.project.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.mt6765.usb.rc",
     src: "etc/init.mt6765.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.connectivity.rc",
-    src: "etc/meta_init.connectivity.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -35,36 +21,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "meta_init.modem.rc",
-    src: "etc/meta_init.modem.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ago.rc",
-    src: "etc/init.ago.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.rc",
-    src: "etc/factory_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.modem.rc",
     src: "etc/init.modem.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.project.rc",
-    src: "etc/factory_init.project.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -77,36 +35,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "meta_init.rc",
-    src: "etc/meta_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.connectivity.rc",
-    src: "etc/factory_init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "multi_init.rc",
-    src: "etc/multi_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.connectivity.rc",
     src: "etc/init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.project.rc",
-    src: "etc/init.project.rc",
     sub_dir: "init/hw",
     vendor: true,
 }

@@ -57,11 +57,6 @@ service lbs_dbg /system/bin/lbs_dbg
     group gps inet misc sdcard_rw sdcard_r media_rw system radio
     socket lbs_dbg stream 660 gps system
 
-#service BGW /vendor/bin/BGW
-#    user system
-#    group gps system radio
-#    class main
-
 # Wlan
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -g@android:wpa_wlan0
