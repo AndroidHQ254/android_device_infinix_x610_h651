@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     init.connectivity.rc \
     init.aee.rc \
-    ueventd.rc \
+    ueventd.mt6765.rc \
     init.recovery.mt6765.rc \
 
 # Shipping API level
