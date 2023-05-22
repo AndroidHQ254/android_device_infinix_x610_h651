@@ -1,0 +1,6 @@
+allow crash_dump bpf_progs_loaded_prop:file { getattr open };
+allow crash_dump hwservicemanager_prop:file { getattr open };
+allow crash_dump runtime_event_log_tags_file:file getattr;
+allow crash_dump selinuxfs:file { open read };
+allow crash_dump init:process ptrace;
+allow crash_dump keystore:process ptrace;

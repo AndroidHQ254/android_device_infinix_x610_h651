@@ -1,1 +1,1 @@
-allow fsck block_device:blk_file read;
+allow fsck block_device:blk_file { ioctl open write };
