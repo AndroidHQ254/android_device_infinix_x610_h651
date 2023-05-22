@@ -1,0 +1,7 @@
+allow init mnt_vendor_file:dir mounton;
+allow init tmpfs:dir { mounton write };
+allow init proc:file write;
+allow init sysfs:file { setattr write };
+allow init vendor_file:file { execute mounton };
+allow init tmpfs:lnk_file create;
+allow init socket_device:sock_file create;
