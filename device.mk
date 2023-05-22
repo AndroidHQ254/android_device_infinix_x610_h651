@@ -50,12 +50,20 @@ PRODUCT_PACKAGES += \
     ueventd.mt6765.rc \
     init.recovery.mt6765.rc \
 
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    libwifi-hal
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/x610_h651/x610_h651-vendor.mk)
