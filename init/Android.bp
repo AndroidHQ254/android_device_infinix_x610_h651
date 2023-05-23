@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_mt6763",
+    name: "libinit_mt6765",
     recovery_available: true,
-    srcs: ["init_mt6763.cpp"],
+    srcs: ["init_mt6765.cpp"],
     whole_static_libs: ["libbase"],
     header_libs: [
         "libbase_headers",

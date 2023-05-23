@@ -19,8 +19,8 @@
 from hashlib import sha1
 import sys
 
-device='breeze'
-vendor='umidigi'
+device='x610_h651'
+vendor='infinix'
 
 lines = [ line for line in open('proprietary-files.txt', 'r') ]
 vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'

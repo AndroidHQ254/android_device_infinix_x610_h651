@@ -1,4 +1,4 @@
-package org.lineageos.umidigi.imsinit;
+package org.lineageos.infinix.imsinit;
 
 import android.app.Service;
 import android.content.Context;

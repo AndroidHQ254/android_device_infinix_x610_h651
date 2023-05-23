@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.umidigi_mt6763
+    android.hardware.light-service.infinix_mt6765
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -205,12 +205,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
-    init.mt6763.rc \
-    init.mt6763.usb.rc \
+    init.mt6765.rc \
+    init.mt6765.usb.rc \
     init.safailnet.rc \
     init.sensor_1_0.rc \
-    fstab.mt6763 \
-    ueventd.rc \
+    fstab.mt6765 \
+    ueventd.mt6765.rc \
     set_zram.sh \
     partition_permission.sh \
     throttle.sh
@@ -288,4 +288,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Inherit Device Vendor
-$(call inherit-product, vendor/umidigi/breeze/breeze-vendor.mk)
+$(call inherit-product, vendor/infinix/x610_h651/x610_h651-vendor.mk)

@@ -14,10 +14,10 @@
 
 cc_binary {
     relative_install_path: "hw",
-    name: "android.hardware.light-service.umidigi_mt6763",
+    name: "android.hardware.light-service.infinix_mt6765",
     proprietary: true,
-    init_rc: ["android.hardware.light-service.umidigi_mt6763.rc"],
-    vintf_fragments: ["android.hardware.light-service.umidigi_mt6763.xml"],
+    init_rc: ["android.hardware.light-service.infinix_mt6765.rc"],
+    vintf_fragments: ["android.hardware.light-service.infinix_mt6765.xml"],
     srcs: ["main.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",

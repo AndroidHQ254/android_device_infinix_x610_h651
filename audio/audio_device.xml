@@ -68,6 +68,19 @@
     <path name="ext_speaker_output" value="turnoff">
         <kctl name="Ext_Speaker_Amp_Switch" value="Off" />
     </path>
+    <!--single mic loopback-->
+    <path name="loopback_use_single_mic_l_ch" value="turnon">
+        <kctl name="loopback_use_single_input" value="Left" />
+    </path>
+    <path name="loopback_use_single_mic_l_ch" value="turnoff">
+        <kctl name="loopback_use_single_input" value="Off" />
+    </path>
+    <path name="loopback_use_single_mic_r_ch" value="turnon">
+        <kctl name="loopback_use_single_input" value="Right" />
+    </path>
+    <path name="loopback_use_single_mic_r_ch" value="turnoff">
+        <kctl name="loopback_use_single_input" value="Off" />
+    </path>
     <!--mic setting-->
     <path name="builtin_Mic_Mic1" value="turnon">
         <kctl name="Audio_MicSource1_Setting" value="ADC1" />

@@ -2,4 +2,4 @@
 /proc/devinfo(/.*)?                                                u:object_r:proc_devinfo:s0
 
 # Light
-/vendor/bin/hw/android\.hardware\.light-service\.umidigi_mt6763 u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light-service\.infinix_mt6765 u:object_r:hal_light_default_exec:s0
