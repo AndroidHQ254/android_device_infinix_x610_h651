@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=breeze
-VENDOR=umidigi
+DEVICE=x610_h651
+VENDOR=infinix
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -71,21 +71,15 @@ function blob_fixup() {
         vendor/lib/hw/android.hardware.audio@4.0-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "android.hardware.audio.common@4.0-util.so" "android.hardware.audio.common@4.0-util-v28.so" "${2}"
             ;;
-        vendor/lib/hw/audio.primary.mt6763.so)
+        vendor/lib/hw/audio.primary.mt6765.so)
             "${PATCHELF}" --replace-needed "libmedia_helper.so" "libmedia_helper-v28.so" "${2}"
             "${PATCHELF}" --replace-needed "libxml2.so" "libxml2-v28.so" "${2}"
             ;;
         vendor/lib/libMtkOmxVdecEx.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
             ;;
-        vendor/lib64/hw/gatekeeper.itrusty.so)
-            "${PATCHELF}" --replace-needed "libgatekeeper.so" "libgatekeeper-v28.so" "${2}"
-            ;;
-        vendor/lib64/hw/keystore.itrusty.so)
-            "${PATCHELF}" --replace-needed "libkeymaster_messages.so" "libkeymaster_messages-v28.so" "${2}"
-            ;;
         vendor/lib64/libmtkcam_stdutils.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v30.so" "${2}"
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v29.so" "${2}"
             ;;
         vendor/lib64/libmtk-ril.so)
             sed -i 's|AT+EAIC=2|AT+EAIC=3|g' "${2}"
