@@ -234,11 +234,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
-# RRO overlay
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
