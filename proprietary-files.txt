@@ -44,6 +44,10 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 
+# Audio
+vendor/lib/libtinyxml.so
+vendor/lib64/libtinyxml.so
+
 # Audio (Bin)
 vendor/bin/audiocmdservice_atci
 vendor/etc/init/audiocmdservice_atci.rc
@@ -69,12 +73,18 @@ vendor/lib/libblisrc32_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 
 # Audio-Hardware
+vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/audio.primary.mt6765.so
 vendor/lib/hw/audio.r_submix.mt6765.so
 vendor/lib/hw/audio.usb.mt6765.so
+vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib64/hw/audio.primary.mt6765.so
 vendor/lib64/hw/audio.r_submix.mt6765.so
 vendor/lib64/hw/audio.usb.mt6765.so
+
+# Audio-Hardware (Prebuild)
+lib/android.hardware.audio.common-util.so:vendor/lib/android.hardware.audio.common-util.so
+lib64/android.hardware.audio.common-util.so:vendor/lib64/android.hardware.audio.common-util.so
 
 # Audio-Hardware (HIDL)
 vendor/bin/hw/android.hardware.audio@4.0-service-mediatek
@@ -219,6 +229,7 @@ vendor/lib/libSwJpgCodec.so
 vendor/lib/libmhalImageCodec.so
 vendor/lib/libmtkcam.eventcallback.so
 vendor/lib/libmtkcam_stdutils.so
+vendor/lib/libstdc++.so
 vendor/lib/s5k3p9sp_mipi_raw_tuning.so
 vendor/lib/s5k3p9spb_mipi_raw_tuning.so
 vendor/lib/s5k3p9sx_mipi_raw_tuning.so
@@ -226,6 +237,7 @@ vendor/lib/s5k3p9sxb_mipi_raw_tuning.so
 vendor/lib/sp250a_mipi_raw_tuning.so
 vendor/lib/sp250ab_mipi_raw_tuning.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/gc8034_mipi_raw_IdxMgr.so
@@ -392,7 +404,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 
 # Camera-bin
 vendor/bin/hw/camerahalserver
@@ -424,7 +435,9 @@ vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 
 # DRM-Hardware
+vendor/lib/libdrm.so
 vendor/lib/libmtk_drvb.so
+vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
 # DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
@@ -943,6 +956,7 @@ vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6765.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
+vendor/lib64/libsensor_custom.so
 
 # Thermal
 -vendor/app/MTKThermalManager/MTKThermalManager.apk
@@ -979,6 +993,11 @@ vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
 # USB
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
+
+# Vibrator
+vendor/bin/hw/android.hardware.vibrator@1.0-service
+vendor/etc/init/android.hardware.vibrator@1.0-service.rc
+-vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 
 # WiFi
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek

@@ -13,10 +13,7 @@ PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
-    android.hardware.audio@5.0.vendor \
     android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.effect@5.0-impl \
-    android.hardware.audio.common-util \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.1.vendor \
     audio.a2dp.default \
@@ -30,7 +27,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libavservices_minijail_vendor \
-    tinymix \
     libxml2.vendor
 
 PRODUCT_COPY_FILES += \
@@ -271,7 +267,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 RODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service
+    android.hardware.vibrator-service.mediatek
 
 # VNDK
 PRODUCT_COPY_FILES += \
