@@ -13,7 +13,9 @@ PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
+    android.hardware.audio@5.0.vendor \
     android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.common-util \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.1.vendor \
@@ -55,8 +57,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.1-service.clearkey \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.2-service.clearkey \
     libdrm
 
 # Gatekeeper
@@ -131,6 +133,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -289,9 +295,9 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor
+    android.hardware.wifi@1.2.vendor \
+    android.hardware.wifi.supplicant@1.1.vendor \
+    android.hardware.wifi.hostapd@1.3.vendor
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \

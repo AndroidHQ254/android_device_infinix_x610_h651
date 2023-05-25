@@ -5,7 +5,7 @@ vendor/bin/rttv
 vendor/lib/libdirect-coredump.so
 vendor/lib64/libdirect-coredump.so
 
-# AEE
+# AEE - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/lib/libaedv.so
 vendor/lib/libladder.so
 vendor/lib/libudf.so
@@ -392,6 +392,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 
 # Camera-bin
 vendor/bin/hw/camerahalserver
@@ -426,12 +427,12 @@ vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 vendor/lib/libmtk_drvb.so
 vendor/lib64/libmtk_drvb.so
 
-# DRM (Hardware)
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.1-service.widevine.xml
+# DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.2-service.widevine.xml
 
-# DRM (Widevine)
+# DRM (Widevine) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
@@ -506,7 +507,7 @@ vendor/lib/vendor.mediatek.hardware.apmonitor@1.0.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
 
-# GPS
+# GPS - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
 vendor/bin/charon
 vendor/bin/ipsec_mon
@@ -756,7 +757,7 @@ vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
-# NVRAM
+# NVRAM - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/atcid
 vendor/bin/nvram_daemon
@@ -906,7 +907,7 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
-# Radio
+# Radio - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/lib/libsysenv.so
 vendor/lib64/libsysenv.so
 
