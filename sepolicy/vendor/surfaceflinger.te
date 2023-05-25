@@ -1,3 +1,10 @@
+allow surfaceflinger vendor_file:file { execute getattr open read };
+allow surfaceflinger device:chr_file { ioctl open read write };
+allow surfaceflinger proc:file { ioctl open read };
+allow surfaceflinger ion_device:chr_file { ioctl read getattr lock map open };
+allow surfaceflinger proc_ged:file ioctl;
+
 get_prop(surfaceflinger, mtk_pq_prop)
 get_prop(surfaceflinger, mtk_pq_ro_prop)
 get_prop(surfaceflinger, vendor_debug_prop)
+get_prop(surfaceflinger, vendor_default_prop)

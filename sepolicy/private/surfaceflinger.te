@@ -1,0 +1,3 @@
+allow surfaceflinger proc_ged:file ioctl;
+allow surfaceflinger ion_device:chr_file { ioctl read getattr lock map open };
+allow surfaceflinger proc_meminfo:file { ioctl read getattr lock map open };

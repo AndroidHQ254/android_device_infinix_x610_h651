@@ -1,0 +1,16 @@
+allow hal_sensors_default device:chr_file { open read write };
+allow hal_sensors_default sysfs_dt_firmware_android:dir { open read search };
+allow hal_sensors_default mnt_vendor_file:file { getattr open read write };
+allow hal_sensors_default sysfs:file { getattr open read write };
+allow hal_sensors_default sysfs_dt_firmware_android:file { getattr open read };
+allow hal_sensors_default mnt_vendor_file:dir search;
+allow hal_sensors_default m_acc_misc_device:chr_file { open read };
+allow hal_sensors_default m_mag_misc_device:chr_file { open read };
+allow hal_sensors_default m_ps_misc_device:chr_file { open read };
+allow hal_sensors_default sensorlist_device:chr_file { open read };
+allow hal_sensors_default sysfs_sensor:dir search;
+allow hal_sensors_default nvcfg_file:file { open read };
+allow hal_sensors_default nvdata_file:file { getattr open read };
+allow hal_sensors_default sysfs_boot_mode:file { open read };
+allow hal_sensors_default sysfs_sensor:file { open read write };
+allow hal_sensors_default sensorlist_device:chr_file write;

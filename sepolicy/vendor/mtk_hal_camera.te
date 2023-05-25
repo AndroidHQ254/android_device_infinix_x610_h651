@@ -1,0 +1,6 @@
+binder_call(mtk_hal_camera, init)
+allow mtk_hal_camera vendor_data_file:dir { add_name write };
+get_prop(mtk_hal_camera, default_prop)
+allow mtk_hal_camera vendor_data_file:file { create getattr read write };
+allow mtk_hal_camera default_android_hwservice:hwservice_manager find;
+allow mtk_hal_camera vendor_data_file:file open;

@@ -1,1 +1,4 @@
 allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
+allow init init:process { ptrace signal };
+binder_call(init, hal_allocator_default)
+binder_call(init, init)

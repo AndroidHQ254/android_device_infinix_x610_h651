@@ -1,0 +1,2 @@
+binder_call(audioserver, init)
+get_prop(audioserver, vendor_default_prop)

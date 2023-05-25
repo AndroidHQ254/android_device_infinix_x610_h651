@@ -1,0 +1,6 @@
+type mtk_cmdq_device, dev_type;
+type mtk_mdp_device, dev_type;
+type mobicore_user_device, dev_type;
+type agps_device, dev_type;
+type wmtdetect_device, dev_type;
+type stpwmt_device, dev_type;

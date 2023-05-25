@@ -4,3 +4,5 @@ type sysfs_graphics, sysfs_type, fs_type, mlstrustedobject;
 
 # Display node
 type vendor_sysfs_graphics, fs_type, sysfs_type;
+
+type proc_lk_env, fs_type, proc_type;

@@ -1,0 +1,3 @@
+allow crash_dump hwservicemanager_prop:file { getattr open };
+allow crash_dump init:process ptrace;
+allow crash_dump vendor_default_prop:file { open };
