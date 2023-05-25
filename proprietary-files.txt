@@ -596,7 +596,6 @@ vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/gatekeeper.mt6765.so
 vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/libimsg_log.so
