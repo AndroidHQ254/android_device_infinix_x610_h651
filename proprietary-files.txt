@@ -5,13 +5,13 @@ vendor/bin/rttv
 vendor/lib/libdirect-coredump.so
 vendor/lib64/libdirect-coredump.so
 
-# AEE - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2101131254:user/release-keys
-vendor/lib/libaedv.so|68eb76e22650e6f7b09f6c1db32a72851445789f
-vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
-vendor/lib/libudf.so|0910236ff7b602a7ee4b6cf5472b5cff0d301f52
-vendor/lib64/libaedv.so|bd09673530e80f6cde27d91229b6df6394191053
-vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
-vendor/lib64/libudf.so|00563b48abe3e19856133a87775363a9ef98c049
+# AEE - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/libaedv.so
+vendor/lib/libladder.so
+vendor/lib/libudf.so
+vendor/lib64/libaedv.so
+vendor/lib64/libladder.so
+vendor/lib64/libudf.so
 
 # APN
 etc/apns-conf.xml:product/etc/apns-conf.xml
@@ -403,6 +403,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 
 # Camera-bin
 vendor/bin/hw/camerahalserver
@@ -439,16 +440,16 @@ vendor/lib/libmtk_drvb.so
 vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
-# DRM (Hardware) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.1-service.widevine.xml
+# DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.2-service.widevine.xml
 
-# DRM (Widevine) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|6828d27a19ef358097936e3cca808afc699226e4
-vendor/lib/libwvhidl.so|1f658a463e92b4059c04ecd2f6c41356f3f1efbb
-vendor/lib64/mediadrm/libwvdrmengine.so|841c6d91f8dba600936f2b9b831e2ae2cdcee8d7
-vendor/lib64/libwvhidl.so|b0626425e9a67c3d28e7bf002761b4e95a732c48
+# DRM (Widevine) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libwvhidl.so
 
 # Display
 vendor/lib/hw/gralloc.default.so
@@ -521,7 +522,7 @@ vendor/lib/vendor.mediatek.hardware.apmonitor@1.0.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
 
-# GPS - from UMIDIGI/A7_Pro/A7_Pro:10/QP1A.190711.020/2208022127:user/release-keys
+# GPS - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
 vendor/bin/charon
 vendor/bin/ipsec_mon
@@ -771,7 +772,7 @@ vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
-# NVRAM - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+# NVRAM - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/atcid
 vendor/bin/nvram_daemon
@@ -923,7 +924,7 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
-# Radio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
+# Radio - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/lib/libsysenv.so
 vendor/lib64/libsysenv.so
 
