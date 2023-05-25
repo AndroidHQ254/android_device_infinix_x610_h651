@@ -596,8 +596,16 @@ vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
 
 # Gatekeeper
+vendor/lib/hw/gatekeeper.default.so
+vendor/lib/hw/gatekeeper.mt6765.so
 vendor/lib/hw/libSoftGatekeeper.so
+vendor/lib/libimsg_log.so
+vendor/lib/libmtee.so
+vendor/lib/vendor.microtrust.hardware.capi@2.0.so
 vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/libimsg_log.so
+vendor/lib64/libmtee.so
+vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
@@ -607,7 +615,6 @@ vendor/lib/egl/libGLESv2_mtk.so
 vendor/lib/libIMGegl.so
 vendor/lib/libOpenCL.so
 vendor/lib/libglslcompiler.so
-vendor/lib/libimsg_log.so
 vendor/lib/libsrv_um.so
 vendor/lib/libtqvalidate.so
 vendor/lib/libusc.so
@@ -617,7 +624,6 @@ vendor/lib64/egl/libGLESv2_mtk.so
 vendor/lib64/libIMGegl.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libglslcompiler.so
-vendor/lib64/libimsg_log.so
 vendor/lib64/libsrv_um.so
 vendor/lib64/libtqvalidate.so
 vendor/lib64/libusc.so
@@ -865,7 +871,6 @@ vendor/lib/libccci_util.so
 vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
-vendor/lib/libfile_op.so
 vendor/lib/libmtknetutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
@@ -883,7 +888,6 @@ vendor/lib64/libccci_util.so
 vendor/lib64/libcrypto-ss.so
 vendor/lib64/libcurl-ss.so
 vendor/lib64/libcurl_xcap_md.so
-vendor/lib64/libfile_op.so
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/libmtk-ril.so
@@ -959,9 +963,11 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 # Sensors
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
+vendor/lib/libfile_op.so
 vendor/lib/libhwm.so
 vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6765.so
+vendor/lib64/libfile_op.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
