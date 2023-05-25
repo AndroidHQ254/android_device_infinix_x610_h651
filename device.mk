@@ -13,6 +13,8 @@ PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio.common-util \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.soundtrigger@2.1.vendor \
     audio.a2dp.default \
@@ -54,7 +56,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.1-service.clearkey
+    android.hardware.drm@1.1-service.clearkey \
+    libdrm
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -87,7 +90,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.3.vendor \
     android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.4.vendor
+    android.hardware.camera.provider@2.4.vendor \
+    libstdc++
 
 # Display
 PRODUCT_PACKAGES += \
@@ -100,6 +104,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.memtrack@1.0.vendor \
+    gralloc.default \
     libvulkan
 
 # HIDL
@@ -200,7 +205,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor \
+    power.default
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -259,7 +265,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 RODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
+    android.hardware.vibrator@1.0-service
 
 # VNDK
 PRODUCT_COPY_FILES += \

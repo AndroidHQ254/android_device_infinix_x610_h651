@@ -44,10 +44,6 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 
-# Audio
-vendor/lib/libtinyxml.so
-vendor/lib64/libtinyxml.so
-
 # Audio (Bin)
 vendor/bin/audiocmdservice_atci
 vendor/etc/init/audiocmdservice_atci.rc
@@ -73,18 +69,12 @@ vendor/lib/libblisrc32_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 
 # Audio-Hardware
-vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib/hw/audio.primary.mt6765.so
 vendor/lib/hw/audio.r_submix.mt6765.so
 vendor/lib/hw/audio.usb.mt6765.so
-vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
 vendor/lib64/hw/audio.primary.mt6765.so
 vendor/lib64/hw/audio.r_submix.mt6765.so
 vendor/lib64/hw/audio.usb.mt6765.so
-
-# Audio-Hardware (Prebuild)
-lib/android.hardware.audio.common-util.so:vendor/lib/android.hardware.audio.common-util.so
-lib64/android.hardware.audio.common-util.so:vendor/lib64/android.hardware.audio.common-util.so
 
 # Audio-Hardware (HIDL)
 vendor/bin/hw/android.hardware.audio@4.0-service-mediatek
@@ -229,7 +219,6 @@ vendor/lib/libSwJpgCodec.so
 vendor/lib/libmhalImageCodec.so
 vendor/lib/libmtkcam.eventcallback.so
 vendor/lib/libmtkcam_stdutils.so
-vendor/lib/libstdc++.so
 vendor/lib/s5k3p9sp_mipi_raw_tuning.so
 vendor/lib/s5k3p9spb_mipi_raw_tuning.so
 vendor/lib/s5k3p9sx_mipi_raw_tuning.so
@@ -434,9 +423,7 @@ vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 
 # DRM-Hardware
-vendor/lib/libdrm.so
 vendor/lib/libmtk_drvb.so
-vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
 # DRM (Hardware)
@@ -451,7 +438,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
 # Display
-vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/gralloc.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
 vendor/lib/libdpframework.so
@@ -464,7 +450,6 @@ vendor/lib/libion_ulit.so
 vendor/lib/libmemtrack_GL.so
 vendor/lib/libminiui.so
 vendor/lib/libpixelflinger.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/gralloc.mt6765.so
 vendor/lib64/hw/hwcomposer.mt6765.so
 vendor/lib64/hw/memtrack.mt6765.so
@@ -800,7 +785,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-service.rc
-vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib/libmmprofile.so
@@ -808,7 +792,6 @@ vendor/lib/libperfctl_vendor.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
-vendor/lib64/hw/power.default.so
 vendor/lib64/hw/power.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib64/libmmprofile.so
@@ -995,11 +978,6 @@ vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
 # USB
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
-
-# Vibrator
-vendor/bin/hw/android.hardware.vibrator@1.0-service
-vendor/etc/init/android.hardware.vibrator@1.0-service.rc
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 
 # WiFi
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
