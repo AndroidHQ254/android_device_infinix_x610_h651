@@ -15,6 +15,9 @@ $(call inherit-product, device/infinix/x610_h651/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := x610_h651
 PRODUCT_NAME := lineage_x610_h651
