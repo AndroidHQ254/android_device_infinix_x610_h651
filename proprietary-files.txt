@@ -694,6 +694,14 @@ vendor/lib/modules/wmt_drv.ko
 # Kernel (ProjectConfig)
 vendor/data/misc/ProjectConfig.mk
 
+# Lights
+vendor/bin/hw/android.hardware.light@2.0-service-mediatek
+vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
+vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so
+vendor/lib/hw/lights.mt6765.so
+vendor/lib64/hw/android.hardware.light@2.0-impl-mediatek.so
+vendor/lib64/hw/lights.mt6765.so
+
 # Media
 vendor/lib/libBnMtkCodec.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
