@@ -667,18 +667,28 @@ vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 
 # Keymaster
+vendor/bin/hw/android.hardware.keymaster@3.0-service
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+vendor/etc/init/android.hardware.keymaster@3.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
+vendor/lib/hw/android.hardware.keymaster@3.0-impl.so
 vendor/lib/hw/keystore.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+vendor/lib/libkeymaster3device.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so
 vendor/lib64/hw/keystore.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+vendor/lib64/libkeymaster3device.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Kmsetkey
+vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/kmsetkey.mt6765.so
+vendor/lib64/hw/kmsetkey.default.so
+vendor/lib64/hw/kmsetkey.mt6765.so
 vendor/lib64/libkmsetkey.so
 
 # Kernel Modules
@@ -698,14 +708,6 @@ vendor/lib/modules/wmt_drv.ko
 
 # Kernel (ProjectConfig)
 vendor/data/misc/ProjectConfig.mk
-
-# Lights
-vendor/bin/hw/android.hardware.light@2.0-service-mediatek
-vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so
-vendor/lib/hw/lights.mt6765.so
-vendor/lib64/hw/android.hardware.light@2.0-impl-mediatek.so
-vendor/lib64/hw/lights.mt6765.so
 
 # Media
 vendor/lib/libBnMtkCodec.so
