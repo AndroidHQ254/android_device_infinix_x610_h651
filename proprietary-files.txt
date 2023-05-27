@@ -605,6 +605,7 @@ vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libmtee.so
 vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
+vendor/lib64/hw/gatekeeper.mt6765.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
