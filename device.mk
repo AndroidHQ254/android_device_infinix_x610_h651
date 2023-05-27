@@ -133,6 +133,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/mtk-kpd.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mtk-kpd.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.keymaster@4.0 \
+    libkeymaster3device \
+    libkeymaster4 \
+    libsoftkeymasterdevice
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.infinix
