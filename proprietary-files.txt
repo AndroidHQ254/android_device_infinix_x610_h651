@@ -867,6 +867,9 @@ vendor/lib/libccci_util.so
 vendor/lib/libcrypto-ss.so
 vendor/lib/libcurl-ss.so
 vendor/lib/libcurl_xcap_md.so
+vendor/lib/libmtkcutils.so
+vendor/lib/libmtkhardware_legacy.so
+vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtknetutils.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
@@ -1047,7 +1050,4 @@ vendor/lib64/libui_ext.so
 # Mediatek
 vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
-vendor/lib/libmtkcutils.so
-vendor/lib/libmtkhardware_legacy.so
-vendor/lib/libmtklimiter_vendor.so
 vendor/lib64/vendor.mediatek.hardware.log@1.0.so
