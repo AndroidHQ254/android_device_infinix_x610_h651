@@ -520,7 +520,7 @@ vendor/lib/vendor.mediatek.hardware.apmonitor@1.0.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
 
-# GPS - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+# GPS
 vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
 vendor/bin/charon
 vendor/bin/ipsec_mon
@@ -786,7 +786,7 @@ vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
-# NVRAM - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+# NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/atcid
 vendor/bin/nvram_daemon
