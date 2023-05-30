@@ -596,16 +596,18 @@ vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
 
 # Gatekeeper
+vendor/bin/hw/vendor.microtrust.hardware.capi@2.0-service
+vendor/etc/init/vendor.microtrust.hardware.capi@2.0-service.rc
 vendor/lib/hw/gatekeeper.mt6765.so
 vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/libimsg_log.so
 vendor/lib/libmtee.so
 vendor/lib/vendor.microtrust.hardware.capi@2.0.so
+vendor/lib64/hw/gatekeeper.mt6765.so
 vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libmtee.so
 vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
-vendor/lib64/hw/gatekeeper.mt6765.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
@@ -994,7 +996,10 @@ vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
 
 # Tee
+vendor/bin/teei_daemon
 vendor/etc/init/microtrust.rc
+vendor/lib/libTEECommon.so
+vendor/lib64/libTEECommon.so
 
 # Vendor Thh
 vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta
