@@ -1,0 +1,7 @@
+allow volte_imcb volte_imcb:capability { setuid wake_alarm };
+allow volte_imcb volte_imcb:capability2 wake_alarm;
+allow volte_imcb ccci_device:chr_file { open read write };
+allow volte_imcb devpts:chr_file setattr;
+allow volte_imcb sysfs_ccci:dir search;
+allow volte_imcb sysfs_ccci:file { open read };
+allow volte_imcb volte_imcb:unix_stream_socket connectto;

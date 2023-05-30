@@ -1,1 +1,2 @@
 allow vold rootfs:dir setattr;
+allow vold persist_data_file:dir { ioctl read open };

@@ -1,0 +1,1 @@
+allow volte_imsm_93 volte_imcb:unix_stream_socket connectto;
