@@ -1016,6 +1016,7 @@ vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
 # WiFi
+-framework/mtk-wifi-service.jar
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
