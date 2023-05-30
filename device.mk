@@ -281,10 +281,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1.vendor
 
-# Vibrator
-RODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
-
 # VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm-armv8-a/shared/vndk-core/android.hardware.audio.common@4.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.audio.common@4.0-util-v28.so \
