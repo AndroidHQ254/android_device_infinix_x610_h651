@@ -1,4 +1,4 @@
-allow volte_imcb volte_imcb:capability { setuid wake_alarm };
+#allow volte_imcb volte_imcb:capability { setuid wake_alarm };
 allow volte_imcb volte_imcb:capability2 wake_alarm;
 allow volte_imcb ccci_device:chr_file { open read write };
 allow volte_imcb devpts:chr_file setattr;
