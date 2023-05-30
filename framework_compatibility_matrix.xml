@@ -82,10 +82,26 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.frhandler</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFRHandler</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.mediatek.hardware.camera.lomoeffect</name>
         <version>1.0</version>
         <interface>
             <name>ILomoEffect</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.camera.security</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureCamera</name>
             <instance>internal/0</instance>
         </interface>
     </hal>
