@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     libvulkan
 
+# FDSAN
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+	debug.fdsan=0
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0 \
