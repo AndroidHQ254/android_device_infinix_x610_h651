@@ -10,6 +10,7 @@ allow init proc:dir { mounton };
 binder_call(init, hwservicemanager)
 binder_call(init, init)
 binder_call(init, cameraserver)
+binder_call(init, system_server)
 
 allow init ram_device:blk_file write;
 allow init vendor_init:capability sys_module;
@@ -64,6 +65,7 @@ allow init same_process_hal_file:file execute;
 allow init sysfs_boot_mode:file { open read };
 allow init audioserver:fd use;
 allow init audioserver:fifo_file write;
-allow init ccci_device:chr_file { ioctl open read };
+allow init ccci_device:chr_file { ioctl open read write };
 allow init sysfs_dt_firmware_android:dir { open read };
 allow init sysfs_dt_firmware_android:file { getattr open read };
+allow init wmtWifi_device:chr_file { open write };

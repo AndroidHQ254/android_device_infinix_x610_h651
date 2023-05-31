@@ -1,2 +1,2 @@
-allow netutils_wrapper epdg_wod:unix_stream_socket read;
+allow netutils_wrapper epdg_wod:unix_stream_socket { read write };
 allow netutils_wrapper epdg_wod:fd use;
