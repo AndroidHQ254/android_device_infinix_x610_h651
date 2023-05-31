@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := infinix
+
 DEVICE_PATH := device/infinix/x610_h651
 
 # Android Verified Boot
@@ -40,8 +42,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Display DPI
 TARGET_SCREEN_DENSITY := 480
