@@ -125,7 +125,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system
+    android.hidl.base@1.0.vendor
 
 ## IMS
 #PRODUCT_PACKAGES += \
@@ -145,11 +145,13 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@4.0 \
-    libkeymaster4support
-
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
+    libkeymaster3device.vendor \
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
+    libpuresoftkeymasterdevice.vendor \
+    libsoftkeymasterdevice.vendor
 
 # Light
 PRODUCT_PACKAGES += \
