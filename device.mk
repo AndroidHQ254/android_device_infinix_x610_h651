@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0 \
     libkeymaster4support
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.infinix
