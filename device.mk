@@ -232,12 +232,15 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.ago.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6765.rc \
     init.mt6765.usb.rc \
+    init.project.rc \
     init.safailnet.rc \
     init.sensor_1_0.rc \
+    fstab.enableswap \
     fstab.mt6765 \
     ueventd.mt6765.rc \
     partition_permission.sh \
