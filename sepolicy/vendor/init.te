@@ -11,6 +11,7 @@ binder_call(init, hwservicemanager)
 binder_call(init, init)
 binder_call(init, cameraserver)
 binder_call(init, system_server)
+binder_call(init, vndservicemanager)
 
 allow init ram_device:blk_file write;
 allow init vendor_init:capability sys_module;
@@ -69,3 +70,22 @@ allow init ccci_device:chr_file { ioctl open read write };
 allow init sysfs_dt_firmware_android:dir { open read };
 allow init sysfs_dt_firmware_android:file { getattr open read };
 allow init wmtWifi_device:chr_file { open write };
+
+allow init bluetooth_data_file:dir { create setattr };
+allow init dhcp_data_file:dir { create setattr };
+allow init gatekeeper_data_file:dir { create setattr };
+allow init keychain_data_file:dir { create setattr };
+allow init keystore_data_file:dir { create setattr };
+allow init media_data_file:dir { create setattr };
+allow init misc_user_data_file:dir { create setattr };
+allow init net_data_file:dir { create setattr };
+allow init perfprofd_data_file:dir { create setattr };
+allow init radio_data_file:dir { create setattr };
+allow init shared_relro_file:dir { create setattr };
+allow init systemkeys_data_file:dir { create setattr };
+allow init vold_data_file:dir { create setattr };
+allow init vpn_data_file:dir { create setattr };
+allow init wifi_data_file:dir { add_name create write };
+allow init wpa_socket:dir create;
+allow init zoneinfo_data_file:dir { create setattr };
+allow init device:file { create write };
