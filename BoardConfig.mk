@@ -55,3 +55,6 @@ endif
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-08-05
