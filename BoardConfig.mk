@@ -53,3 +53,5 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 endif
 
+# Platform
+TARGET_BOARD_PLATFORM := mt6765
