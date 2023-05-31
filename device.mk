@@ -124,12 +124,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0 \
-    android.hidl.allocator@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system
 
 ## IMS
 #PRODUCT_PACKAGES += \
