@@ -222,11 +222,6 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(LOCAL_PATH)/mtk_services_log.mk
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    power.default
-
 # Radio
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.1.vendor \

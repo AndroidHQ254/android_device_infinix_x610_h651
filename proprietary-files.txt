@@ -818,9 +818,12 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
+vendor/bin/hw/power_native_test_v_2_0
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-service.rc
+vendor/etc/power_whitelist_cfg.xml
+vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib/libmmprofile.so
@@ -828,6 +831,7 @@ vendor/lib/libperfctl_vendor.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
+vendor/lib64/hw/power.default.so
 vendor/lib64/hw/power.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib64/libmmprofile.so
@@ -1043,7 +1047,6 @@ vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
 
 # Misc
-vendor/bin/hw/power_native_test_v_2_0
 vendor/bin/factory
 vendor/bin/loghidlvendorservice
 vendor/bin/meta_tst
@@ -1052,7 +1055,6 @@ vendor/bin/wmt_fdb
 vendor/bin/wmt_loopback
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/ams_aal_config.xml
-vendor/etc/power_whitelist_cfg.xml
 vendor/lib/libmrdumpv.so
 vendor/lib64/libmrdumpv.so
 vendor/lib64/libui_ext.so
