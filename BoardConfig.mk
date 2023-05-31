@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := infinix
+
 DEVICE_PATH := device/infinix/x610_h651
 
 # Android Verified Boot
