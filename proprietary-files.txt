@@ -229,7 +229,6 @@ vendor/lib/libSwJpgCodec.so
 vendor/lib/libmhalImageCodec.so
 vendor/lib/libmtkcam.eventcallback.so
 vendor/lib/libmtkcam_stdutils.so
-vendor/lib/libstdc++.so
 vendor/lib/s5k3p9sp_mipi_raw_tuning.so
 vendor/lib/s5k3p9spb_mipi_raw_tuning.so
 vendor/lib/s5k3p9sx_mipi_raw_tuning.so
