@@ -325,18 +325,16 @@ lib/vndk-28/android.hardware.ir@1.0.so
 lib64/vndk-28/android.hardware.ir@1.0.so
 
 # Keymaster
-lib/vndk-28/android.hardware.keymaster@3.0.so
-lib/vndk-28/android.hardware.keymaster@4.0.so
-lib64/vndk-28/android.hardware.keymaster@3.0.so
-lib64/vndk-28/android.hardware.keymaster@4.0.so
-vendor/bin/hw/android.hardware.keymaster@3.0-service
-vendor/etc/init/android.hardware.keymaster@3.0-service.rc
-vendor/lib/hw/android.hardware.keymaster@3.0-impl.so
+vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/lib/hw/keystore.mt6765.so
-vendor/lib/libkeymaster3device.so
-vendor/lib64/hw/android.hardware.keymaster@3.0-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib64/hw/keystore.mt6765.so
-vendor/lib64/libkeymaster3device.so
+vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
+vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Light
 lib/vndk-28/android.hardware.light@2.0.so
@@ -545,8 +543,6 @@ vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwifi-hal.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
@@ -564,7 +560,6 @@ vendor/bin/hw/camerahalserver
 vendor/bin/hw/power_native_test_v_2_0
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
-vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.log@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
 vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
@@ -784,7 +779,6 @@ vendor/etc/init/res_monitor.rc
 vendor/etc/init/rild.rc
 vendor/etc/init/vendor.mediatek.hardware.dfps@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.gnss@1.1-service.rc
-vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc
@@ -1019,7 +1013,6 @@ vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/hw/swfingerprint.default.so
 vendor/lib/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
@@ -1154,8 +1147,6 @@ vendor/lib/sp250ab_mipi_raw_tuning.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib/vendor.mediatek.hardware.dfps@1.0.so
-vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
-vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
@@ -1176,7 +1167,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.gnss@1.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
@@ -1453,8 +1443,6 @@ vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib64/vendor.mediatek.hardware.gnss@1.1.so
-vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
-vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.log@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
