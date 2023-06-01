@@ -1,5 +1,6 @@
 # MTK platform .rc configure
 
+import /vendor/etc/init/microtrust.rc
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6765.usb.rc
 import /vendor/etc/init/hw/init.mal.rc
