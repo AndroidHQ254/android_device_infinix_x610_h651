@@ -52,124 +52,22 @@ vendor/lib/soundfx/libdynproc.so
 vendor/lib/libDiracAPI_SHARED.so
 vendor/lib64/soundfx/libdynproc.so
 
-# Audio configs
-etc/a2dp_audio_policy_configuration.xml
-etc/audio_effects.conf
-etc/audio_policy_configuration.xml
-etc/audio_policy_configuration_stub.xml
-etc/audio_policy_volumes.xml
-etc/default_volume_tables.xml
-etc/hearing_aid_audio_policy_configuration.xml
-etc/r_submix_audio_policy_configuration.xml
-etc/usb_audio_policy_configuration.xml
-vendor/etc/a2dp_audio_policy_configuration.xml
-vendor/etc/audio_effects.xml
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/default_volume_tables.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
-vendor/etc/usb_audio_policy_configuration.xml
-
-# Authsecret
-lib/vndk-28/android.hardware.authsecret@1.0.so
-lib64/vndk-28/android.hardware.authsecret@1.0.so
-
-# Automotive
-lib/vndk-28/android.hardware.automotive.audiocontrol@1.0.so
-lib/vndk-28/android.hardware.automotive.evs@1.0.so
-lib64/vndk-28/android.hardware.automotive.audiocontrol@1.0.so
-lib64/vndk-28/android.hardware.automotive.evs@1.0.so
-
 # Bluetooth
-lib/vndk-28/android.hardware.bluetooth@1.0.so
-lib64/vndk-28/android.hardware.bluetooth@1.0.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
 
-# Bluetooth (A2DP)
-lib/vndk-28/android.hardware.bluetooth.a2dp@1.0.so
-lib64/vndk-28/android.hardware.bluetooth.a2dp@1.0.so
-
-# Boot
-lib/vndk-28/android.hardware.boot@1.0.so
-lib64/vndk-28/android.hardware.boot@1.0.so
-
-# Broadcast radio
-lib/vndk-28/android.hardware.broadcastradio@1.0.so
-lib/vndk-28/android.hardware.broadcastradio@1.1.so
-lib/vndk-28/android.hardware.broadcastradio@2.0.so
-lib64/vndk-28/android.hardware.broadcastradio@1.0.so
-lib64/vndk-28/android.hardware.broadcastradio@1.1.so
-lib64/vndk-28/android.hardware.broadcastradio@2.0.so
-
-# Camera
-lib/vndk-28/android.hardware.camera.common@1.0.so
-lib/vndk-28/android.hardware.camera.device@1.0.so
-lib/vndk-28/android.hardware.camera.device@3.2.so
-lib/vndk-28/android.hardware.camera.device@3.3.so
-lib/vndk-28/android.hardware.camera.device@3.4.so
-lib/vndk-28/android.hardware.camera.metadata@3.2.so
-lib/vndk-28/android.hardware.camera.metadata@3.3.so
-lib/vndk-28/android.hardware.camera.provider@2.4.so
-lib/vndk-sp-28/android.hardware.graphics.common@1.0.so
-lib64/vndk-28/android.hardware.camera.common@1.0.so
-lib64/vndk-28/android.hardware.camera.device@1.0.so
-lib64/vndk-28/android.hardware.camera.device@3.2.so
-lib64/vndk-28/android.hardware.camera.device@3.3.so
-lib64/vndk-28/android.hardware.camera.device@3.4.so
-lib64/vndk-28/android.hardware.camera.metadata@3.2.so
-lib64/vndk-28/android.hardware.camera.metadata@3.3.so
-lib64/vndk-28/android.hardware.camera.provider@2.4.so
-lib64/vndk-sp-28/android.hardware.graphics.common@1.0.so
-
 # CAS
-lib/vndk-28/android.hardware.cas@1.0.so
-lib64/vndk-28/android.hardware.cas@1.0.so
 vendor/bin/hw/android.hardware.cas@1.0-service
 vendor/etc/init/android.hardware.cas@1.0-service.rc
 
 # Configstore
-lib/vndk-28/android.hardware.configstore-utils.so
-lib/vndk-28/android.hardware.configstore@1.0.so
-lib/vndk-28/android.hardware.configstore@1.1.so
-lib64/vndk-28/android.hardware.configstore-utils.so
-lib64/vndk-28/android.hardware.configstore@1.0.so
-lib64/vndk-28/android.hardware.configstore@1.1.so
 vendor/bin/hw/android.hardware.configstore@1.1-service
 vendor/etc/init/android.hardware.configstore@1.1-service.rc
 vendor/lib64/libhwminijail.so
 
-# Confirmation UI
-lib/vndk-28/android.hardware.confirmationui-support-lib.so
-lib/vndk-28/android.hardware.confirmationui@1.0.so
-lib64/vndk-28/android.hardware.confirmationui-support-lib.so
-lib64/vndk-28/android.hardware.confirmationui@1.0.so
-
-# Context hub
-lib/vndk-28/android.hardware.contexthub@1.0.so
-lib64/vndk-28/android.hardware.contexthub@1.0.so
-
 # Display
 lib/egl/libGLES_android.so
-lib/vndk-28/android.hardware.graphics.allocator@2.0.so
-lib/vndk-28/android.hardware.graphics.bufferqueue@1.0.so
-lib/vndk-28/android.hardware.graphics.composer@2.1.so
-lib/vndk-28/android.hardware.graphics.composer@2.2.so
-lib/vndk-28/android.hardware.media@1.0.so
-lib/vndk-28/android.hardware.memtrack@1.0.so
-lib/vndk-sp-28/android.hardware.graphics.common@1.1.so
-lib/vndk-sp-28/android.hardware.graphics.mapper@2.0.so
-lib/vndk-sp-28/android.hardware.graphics.mapper@2.1.so
 lib64/egl/libGLES_android.so
-lib64/vndk-28/android.hardware.graphics.allocator@2.0.so
-lib64/vndk-28/android.hardware.graphics.bufferqueue@1.0.so
-lib64/vndk-28/android.hardware.graphics.composer@2.1.so
-lib64/vndk-28/android.hardware.graphics.composer@2.2.so
-lib64/vndk-28/android.hardware.media@1.0.so
-lib64/vndk-28/android.hardware.memtrack@1.0.so
-lib64/vndk-sp-28/android.hardware.graphics.common@1.1.so
-lib64/vndk-sp-28/android.hardware.graphics.mapper@2.0.so
-lib64/vndk-sp-28/android.hardware.graphics.mapper@2.1.so
 vendor/bin/hw/android.hardware.graphics.allocator@2.0-service
 vendor/bin/hw/android.hardware.graphics.composer@2.1-service
 vendor/bin/hw/android.hardware.memtrack@1.0-service
@@ -255,15 +153,7 @@ vendor/lib/libwvhidl.so|1f658a463e92b4059c04ecd2f6c41356f3f1efbb
 vendor/lib64/mediadrm/libwvdrmengine.so|841c6d91f8dba600936f2b9b831e2ae2cdcee8d7
 vendor/lib64/libwvhidl.so|b0626425e9a67c3d28e7bf002761b4e95a732c48
 
-# Dumpstate
-lib/vndk-28/android.hardware.dumpstate@1.0.so
-lib64/vndk-28/android.hardware.dumpstate@1.0.so
-
 # Fingerprint
-lib/vndk-28/android.hardware.biometrics.fingerprint@2.1.so
-lib/vndk-28/android.hardware.biometrics.fingerprint@2.2.so
-lib64/vndk-28/android.hardware.biometrics.fingerprint@2.1.so
-lib64/vndk-28/android.hardware.biometrics.fingerprint@2.2.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 
@@ -279,16 +169,6 @@ vendor/lib64/libimsg_log.so
 vendor/lib64/libmtee.so
 vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
 
-# GNSS
-lib/vndk-28/android.hardware.gnss@1.0.so
-lib/vndk-28/android.hardware.gnss@1.1.so
-lib64/vndk-28/android.hardware.gnss@1.0.so
-lib64/vndk-28/android.hardware.gnss@1.1.so
-
-# IR
-lib/vndk-28/android.hardware.ir@1.0.so
-lib64/vndk-28/android.hardware.ir@1.0.so
-
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
@@ -301,71 +181,24 @@ vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Local time
-vendor/lib/hw/local_time.default.so
-vendor/lib64/hw/local_time.default.so
-
 # Media (OMX)
-etc/seccomp_policy/mediacodec.policy
-lib/vndk-28/android.hardware.cas.native@1.0.so
-lib/vndk-28/android.hardware.media.omx@1.0.so
 lib/libmediaextractor.so
 lib/libstagefright_codecbase.so
 lib/libstagefright_wfd_mtk.so
-lib64/vndk-28/android.hardware.cas.native@1.0.so
-lib64/vndk-28/android.hardware.media.omx@1.0.so
 lib64/libmediaextractor.so
 lib64/libstagefright_codecbase.so
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/etc/init/android.hardware.media.omx@1.0-service.rc
-vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 
-# Media configs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_google_video_le.xml
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_mediatek_video.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles_V1_0.xml
-
-# Neural networks
-lib/vndk-28/android.hardware.neuralnetworks@1.0.so
-lib/vndk-28/android.hardware.neuralnetworks@1.1.so
-lib64/vndk-28/android.hardware.neuralnetworks@1.0.so
-lib64/vndk-28/android.hardware.neuralnetworks@1.1.so
-
-# NFC
-lib/vndk-28/android.hardware.nfc@1.0.so
-lib/vndk-28/android.hardware.nfc@1.1.so
-lib64/vndk-28/android.hardware.nfc@1.0.so
-lib64/vndk-28/android.hardware.nfc@1.1.so
-
-# OEM lock
-lib/vndk-28/android.hardware.oemlock@1.0.so
-lib64/vndk-28/android.hardware.oemlock@1.0.so
-
 # Power
-lib/vndk-28/android.hardware.power@1.0.so
-lib/vndk-28/android.hardware.power@1.1.so
-lib/vndk-28/android.hardware.power@1.2.so
-lib64/vndk-28/android.hardware.power@1.0.so
-lib64/vndk-28/android.hardware.power@1.1.so
-lib64/vndk-28/android.hardware.power@1.2.so
 vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib64/hw/power.default.so
 vendor/lib64/hw/power.mt6765.so
 
 # Radio
-lib/vndk-28/android.hardware.radio@1.0.so
-lib/vndk-28/android.hardware.radio@1.1.so
-lib/vndk-28/android.hardware.radio@1.2.so
-lib64/vndk-28/android.hardware.radio@1.0.so
-lib64/vndk-28/android.hardware.radio@1.1.so
-lib64/vndk-28/android.hardware.radio@1.2.so
 vendor/bin/hw/mtkfusionrild
 vendor/lib/libmtkcutils.so
 vendor/lib/libmtkhardware_legacy.so
@@ -405,17 +238,7 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
-# RenderScript
-lib/vndk-sp-28/android.hardware.renderscript@1.0.so
-lib64/vndk-sp-28/android.hardware.renderscript@1.0.so
-
-# Secure element
-lib/vndk-28/android.hardware.secure_element@1.0.so
-lib64/vndk-28/android.hardware.secure_element@1.0.so
-
 # Sensors
-lib/vndk-28/android.hardware.sensors@1.0.so
-lib64/vndk-28/android.hardware.sensors@1.0.so
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
 vendor/lib/libfile_op.so
@@ -428,12 +251,6 @@ vendor/lib64/libksensor.so
 # Soundtrigger
 vendor/lib/hw/sound_trigger.primary.mt6765.so
 vendor/lib64/hw/sound_trigger.primary.mt6765.so
-
-# Tether offload
-lib/vndk-28/android.hardware.tetheroffload.config@1.0.so
-lib/vndk-28/android.hardware.tetheroffload.control@1.0.so
-lib64/vndk-28/android.hardware.tetheroffload.config@1.0.so
-lib64/vndk-28/android.hardware.tetheroffload.control@1.0.so
 
 # Thermal
 vendor/app/MTKThermalManager/MTKThermalManager.apk
@@ -452,36 +269,10 @@ vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib/hw/thermal.mt6765.so
 vendor/lib/libthermalalgo.so
 vendor/lib64/hw/thermal.mt6765.so
-
-# TV
-lib/vndk-28/android.hardware.tv.cec@1.0.so
-lib/vndk-28/android.hardware.tv.input@1.0.so
-lib64/vndk-28/android.hardware.tv.cec@1.0.so
-lib64/vndk-28/android.hardware.tv.input@1.0.so
-
-# USB
-lib/vndk-28/android.hardware.usb@1.0.so
-lib/vndk-28/android.hardware.usb@1.1.so
-lib64/vndk-28/android.hardware.usb@1.0.so
-lib64/vndk-28/android.hardware.usb@1.1.so
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
-# VR
-lib/vndk-28/android.hardware.vr@1.0.so
-lib64/vndk-28/android.hardware.vr@1.0.so
-
-# Weaver
-lib/vndk-28/android.hardware.weaver@1.0.so
-lib64/vndk-28/android.hardware.weaver@1.0.so
-
 # Wi-Fi
-lib/vndk-28/android.hardware.wifi@1.0.so
-lib/vndk-28/android.hardware.wifi@1.1.so
-lib/vndk-28/android.hardware.wifi@1.2.so
-lib64/vndk-28/android.hardware.wifi@1.0.so
-lib64/vndk-28/android.hardware.wifi@1.1.so
-lib64/vndk-28/android.hardware.wifi@1.2.so
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
@@ -489,11 +280,6 @@ vendor/etc/init/android.hardware.wifi@1.0-service-mediatek.rc
 vendor/lib64/libwifi-hal.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
-
-# Wi-Fi configs
-vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/wpa_supplicant.conf
-vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Miscellaneous
 vendor/app/EmCamera/lib/arm64/libem_camera_jni.so
