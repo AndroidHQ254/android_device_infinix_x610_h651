@@ -41,7 +41,6 @@ vendor.camera.mdp.dre.enable=0
 ro.vendor.mediatek.version.branch=alps-mp-p0.mp1
 ro.vendor.mediatek.version.release=X610B-H651AB-P-200805V370
 bt.profiles.avrcp.multiPlayer.enable=0
-ro.com.google.clientidbase=android-transsion-infinix-rev1
 persist.radio.multisim.config=dsds
 persist.vendor.radio.msimmode=dsds
 ro.vendor.mtk_besloudness_support=1
