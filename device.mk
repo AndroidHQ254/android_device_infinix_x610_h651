@@ -201,7 +201,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 # Tethering
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     TetheringConfigOverlay
 
 # Thermal
@@ -215,7 +215,9 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service \
+    android.hardware.vibrator@1.0
 
 # VNDK
 PRODUCT_COPY_FILES += \

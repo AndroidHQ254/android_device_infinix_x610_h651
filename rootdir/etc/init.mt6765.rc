@@ -498,7 +498,7 @@ on post-fs-data
     mkdir /data/vendor/arcsoft 0777 system system
 #ITD:add arcsoft by yuanchen.qiu 20190425 end
 #ITD:Add Midtest Mian3 Failed By Jesse 190525 Start
-    chmod root root /sys/class/main2_light/main2_light/main2_light
+    chmod root /sys/class/main2_light/main2_light/main2_light
     chmod 0666 /sys/class/main2_light/main2_light/main2_light
 #ITD:Add Midtest Mian3 Failed By Jesse 190525 End
     #Camera
