@@ -221,16 +221,28 @@ lib64/libarcsoft_wideselfie.so
 vendor/etc/cache_data
 vendor/etc/megviisegment_model
 vendor/etc/model_mdl_cache
+vendor/lib/gc8034_mipi_raw_tuning.so
+vendor/lib/gc8034b_mipi_raw_tuning.so
 vendor/lib/libJpgDecPipe.so
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libSwJpgCodec.so
 vendor/lib/libmhalImageCodec.so
 vendor/lib/libmtkcam.eventcallback.so
 vendor/lib/libmtkcam_stdutils.so
-vendor/lib/libstdc++.so
+vendor/lib/s5k3p9sp_mipi_raw_tuning.so
+vendor/lib/s5k3p9spb_mipi_raw_tuning.so
+vendor/lib/s5k3p9sx_mipi_raw_tuning.so
+vendor/lib/s5k3p9sxb_mipi_raw_tuning.so
+vendor/lib/sp250a_mipi_raw_tuning.so
+vendor/lib/sp250ab_mipi_raw_tuning.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so
+vendor/lib64/hw/vendor.mediatek.hardware.camera.bgservice@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
+vendor/lib64/gc8034_mipi_raw_IdxMgr.so
+vendor/lib64/gc8034_mipi_raw_tuning.so
+vendor/lib64/gc8034b_mipi_raw_IdxMgr.so
+vendor/lib64/gc8034b_mipi_raw_tuning.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
 vendor/lib64/lib3a.af.core.so
@@ -244,7 +256,10 @@ vendor/lib64/lib3a.gma.so
 vendor/lib64/lib3a.lce.so
 vendor/lib64/lib3a.log.so
 vendor/lib64/lib3a.n3d3a.so
+vendor/lib64/libCheckLeak.so
+vendor/lib64/libImageEval.so
 vendor/lib64/libJpgEncPipe.so
+vendor/lib64/libMtkSImage.so
 vendor/lib64/libSonyIMX230PdafLibrary.so
 vendor/lib64/libSonyIMX230PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX338PdafLibrary.so
@@ -253,11 +268,27 @@ vendor/lib64/libSonyIMX386PdafLibrary.so
 vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
+vendor/lib64/libTranArcDro.so
+vendor/lib64/libTranArcFilter.so
+vendor/lib64/libTranArcHDR.so
+vendor/lib64/libTranArcLowLight.so
+vendor/lib64/libTranArcPicselfie.so
+vendor/lib64/libTranDenoise.so
+vendor/lib64/libTranExtImgProc.so
+vendor/lib64/libTranFaceBeauty.so
+vendor/lib64/libTranPlatHW.so
+vendor/lib64/libTranSTSingleBlur.so
+vendor/lib64/libTranUndistort.so
+vendor/lib64/libTranVDSceneDetector.so
+vendor/lib64/libVDSceneDetector.so
+vendor/lib64/libWaterMarkProc.so
+vendor/lib64/libamipengine.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_dro.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_low_light_shot.so
 vendor/lib64/libarcsoft_picselfie_algorithm.so
+vendor/lib64/libcalculatesharpness.so
 vendor/lib64/libcam.feature_utils.so
 vendor/lib64/libcam.hal3a.cctsvr.so
 vendor/lib64/libcam.hal3a.log.so
@@ -292,11 +323,15 @@ vendor/lib64/libcamdrv_twin.so
 vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcameracustom.so
+vendor/lib64/libdcs_aesync.so
+vendor/lib64/libdenoise.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
+vendor/lib64/libmegsegment.so
 vendor/lib64/libmfllcore.so
+vendor/lib64/libmpbase.so
 vendor/lib64/libmtkcam.eventcallback.so
 vendor/lib64/libmtkcam.featurepipe.capture.so
 vendor/lib64/libmtkcam.featurepipe.streaming.so
@@ -342,7 +377,27 @@ vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tsf.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
+vendor/lib64/libstblur_capture_api.so
+vendor/lib64/libstereoinfoaccessor_vsdof.so
+vendor/lib64/libtranssion_beauty.so
+vendor/lib64/libundistort_64.so
+vendor/lib64/libwa_depth.so
+vendor/lib64/libwa_megface.so
+vendor/lib64/libwa_refocus.so
+vendor/lib64/libwa_rtdof.so
 vendor/lib64/libwestalgo_cal.so
+vendor/lib64/s5k3p9sp_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sp_mipi_raw_tuning.so
+vendor/lib64/s5k3p9spb_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9spb_mipi_raw_tuning.so
+vendor/lib64/s5k3p9sx_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sx_mipi_raw_tuning.so
+vendor/lib64/s5k3p9sxb_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sxb_mipi_raw_tuning.so
+vendor/lib64/sp250a_mipi_raw_IdxMgr.so
+vendor/lib64/sp250a_mipi_raw_tuning.so
+vendor/lib64/sp250ab_mipi_raw_IdxMgr.so
+vendor/lib64/sp250ab_mipi_raw_tuning.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
@@ -379,7 +434,9 @@ vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 
 # DRM-Hardware
+vendor/lib/libdrm.so
 vendor/lib/libmtk_drvb.so
+vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
 # DRM (Hardware) - from infinix x655f 10
@@ -396,28 +453,40 @@ vendor/lib64/libwvhidl.so
 vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/gralloc.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
+vendor/lib/libIMGegl.so
 vendor/lib/libdpframework.so
 vendor/lib/libfpspolicy.so
 vendor/lib/libged.so
+vendor/lib/libglslcompiler.so
 vendor/lib/libgpu_aux.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
+vendor/lib/libmemtrack_GL.so
 vendor/lib/libminiui.so
 vendor/lib/libpixelflinger.so
+vendor/lib/libsrv_um.so
+vendor/lib/libtqvalidate.so
+vendor/lib/libusc.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/gralloc.mt6765.so
 vendor/lib64/hw/hwcomposer.mt6765.so
 vendor/lib64/hw/memtrack.mt6765.so
+vendor/lib64/libIMGegl.so
 vendor/lib64/libdpframework.so
 vendor/lib64/libfpspolicy.so
 vendor/lib64/libged.so
+vendor/lib64/libglslcompiler.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
+vendor/lib64/libmemtrack_GL.so
 vendor/lib64/libminiui.so
 vendor/lib64/libpixelflinger.so
+vendor/lib64/libsrv_um.so
+vendor/lib64/libtqvalidate.so
+vendor/lib64/libusc.so
 
 # Engineer Mode
 vendor/app/EmCamera/lib/arm64/libem_camera_jni.so
@@ -543,8 +612,16 @@ vendor/etc/security/cacerts_supl/c542733d.0
 vendor/etc/security/cacerts_supl/f336e3d1.0
 
 # Gatekeeper
+vendor/lib/hw/gatekeeper.default.so
+vendor/lib/hw/gatekeeper.mt6765.so
 vendor/lib/hw/libSoftGatekeeper.so
+vendor/lib/libimsg_log.so
+vendor/lib/libmtee.so
+vendor/lib/vendor.microtrust.hardware.capi@2.0.so
 vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/libimsg_log.so
+vendor/lib64/libmtee.so
+vendor/lib64/vendor.microtrust.hardware.capi@2.0.so
 
 # Graphics
 vendor/lib/egl/egl.cfg
@@ -897,6 +974,7 @@ vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6765.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
+vendor/lib64/libsensor_custom.so
 
 # Thermal
 -vendor/app/MTKThermalManager/MTKThermalManager.apk
@@ -921,7 +999,10 @@ vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
 
 # Tee
+vendor/bin/teei_daemon
 vendor/etc/init/microtrust.rc
+vendor/lib/libTEECommon.so
+vendor/lib64/libTEECommon.so
 
 # Vendor Thh
 vendor/thh/ta/7778c03fc30c4dd0a319ea29643d4d4b.ta
@@ -964,7 +1045,6 @@ vendor/bin/wmt_loopback
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/ams_aal_config.xml
 vendor/etc/power_whitelist_cfg.xml
-vendor/etc/sw_config.xml
 vendor/lib/libmrdumpv.so
 vendor/lib64/libmrdumpv.so
 vendor/lib64/libui_ext.so

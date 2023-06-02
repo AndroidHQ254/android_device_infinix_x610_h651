@@ -91,6 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    libstdc++ \
     libvulkan
 
 # IMS
@@ -202,7 +203,6 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     fstab.mt6765 \
     ueventd.mt6765.rc \
-    set_zram.sh \
     partition_permission.sh \
     throttle.sh
 
