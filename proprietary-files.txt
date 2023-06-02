@@ -5,13 +5,13 @@ vendor/bin/rttv
 vendor/lib/libdirect-coredump.so
 vendor/lib64/libdirect-coredump.so
 
-# AEE - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2101131254:user/release-keys
-vendor/lib/libaedv.so|68eb76e22650e6f7b09f6c1db32a72851445789f
-vendor/lib/libladder.so|b3161af9c1ae115b467ed6d210355348717145c8
-vendor/lib/libudf.so|0910236ff7b602a7ee4b6cf5472b5cff0d301f52
-vendor/lib64/libaedv.so|bd09673530e80f6cde27d91229b6df6394191053
-vendor/lib64/libladder.so|47ab171fde2026c25c0c63f0af9bfcee3fcd74a9
-vendor/lib64/libudf.so|00563b48abe3e19856133a87775363a9ef98c049
+# AEE - from infinix x655f 10
+vendor/lib/libaedv.so
+vendor/lib/libladder.so
+vendor/lib/libudf.so
+vendor/lib64/libaedv.so
+vendor/lib64/libladder.so
+vendor/lib64/libudf.so
 
 # APN
 etc/apns-conf.xml:product/etc/apns-conf.xml
@@ -44,9 +44,9 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 
-# Audio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/libtinyxml.so|db901f50b694ec5791932685466ceafbd64567a5
-vendor/lib64/libtinyxml.so|b9f9790bd8704bb8d1aebc6ee78a125f7023d925
+# Audio - from infinix x655f 10
+vendor/lib/libtinyxml.so
+vendor/lib64/libtinyxml.so
 
 # Audio (Bin)
 vendor/bin/audiocmdservice_atci
@@ -366,7 +366,7 @@ vendor/lib64/libfeature_lmv.so
 vendor/lib64/libfeature_rss.so
 
 # Charger - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
-bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
+# bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
 
 # Dfps
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
@@ -382,16 +382,15 @@ vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 vendor/lib/libmtk_drvb.so
 vendor/lib64/libmtk_drvb.so
 
-# DRM (Hardware) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine|bb1ee465a6608d2704fbe9a787acbc7c4dc0aa85
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+# DRM (Hardware) - from infinix x655f 10
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 
-# DRM (Widevine) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/mediadrm/libwvdrmengine.so|6828d27a19ef358097936e3cca808afc699226e4
-vendor/lib/libwvhidl.so|1f658a463e92b4059c04ecd2f6c41356f3f1efbb
-vendor/lib64/mediadrm/libwvdrmengine.so|841c6d91f8dba600936f2b9b831e2ae2cdcee8d7
-vendor/lib64/libwvhidl.so|b0626425e9a67c3d28e7bf002761b4e95a732c48
+# DRM (Widevine) - from infinix x655f 10
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libwvhidl.so
 
 # Display
 vendor/lib/hw/gralloc.default.so
@@ -431,8 +430,14 @@ vendor/lib64/libem_camera_jni.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
 
-# Fingerprint
-vendor/lib64/hw/swfingerprint.default.so:vendor/lib64/hw/fingerprint.mt6765.so
+# Fingerprint (Sunwave)
+vendor/bin/hw/vendor.sw.swfingerprint@1.0-service
+vendor/etc/init/vendor.sw.swfingerprint@1.0-service.rc
+vendor/etc/sw_config.xml
+vendor/lib/hw/swfingerprint.default.so
+vendor/lib/hw/vendor.sw.swfingerprint@1.0-impl.so
+vendor/lib/vendor.sw.swfingerprint@1.0.so
+vendor/lib64/hw/swfingerprint.default.so
 
 # Firmware
 vendor/firmware/MNL.bin
@@ -603,9 +608,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
-# Kmsetkey
-vendor/lib64/libkmsetkey.so
-
 # Kernel Modules
 vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.fmradio_drv.rc
@@ -623,6 +625,13 @@ vendor/lib/modules/wmt_drv.ko
 
 # Kernel (ProjectConfig)
 vendor/data/misc/ProjectConfig.mk
+
+# Kmsetkey
+vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/kmsetkey.mt6765.so
+vendor/lib64/hw/kmsetkey.default.so
+vendor/lib64/hw/kmsetkey.mt6765.so
+vendor/lib64/libkmsetkey.so
 
 # Media
 vendor/lib/libBnMtkCodec.so
@@ -700,30 +709,30 @@ vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
-# NVRAM - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|8f8b1c931ce4859f58867bf4bf320fcae47bb22b
-vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
-vendor/bin/nvram_daemon|256cbae6f6bdd89961c74a5fadf44e0fd90d661a
-vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
-vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
-vendor/lib/libcustom_nvram.so|75dea5ba3fe898dd1f2e0ebd4f6123ea62d1c52f
-vendor/lib/libnvram.so|a13182a5e7fe16b485524983ef2d0becbd107b1b
-vendor/lib/libnvram_daemon_callback.so|c5b93e48668d419573c7e9da0d72707575189ab5
-vendor/lib/libnvram_platform.so|a889e5cbdc198a4333dbb2c1fbb4144b150f20a0
-vendor/lib/libnvram_sec.so|664c662ddd716ba9988608d11b17b1c5f7131e46
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so|50f11bde5ef568117b73307af88970ed290ddbf2
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|8e888c2f7f317062f2f4e71c75903b82fd1819a4
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|f35f6ccad0584f3de90dce80fbf6a3fba75d8a66
-vendor/lib64/libcustom_nvram.so|c1b2b4f05399d5a1d47d8cd9fc27622e79e55a24
-vendor/lib64/libnvram.so|31d858956ba1a630b3ebbf2dfa961202db5db103
-vendor/lib64/libnvram_daemon_callback.so|b828b4d80ce2c48d8f42e5b6b96cf7750c0f567c
-vendor/lib64/libnvram_platform.so|7345d991c4a1a0e30251a298f880c48010a0417c
-vendor/lib64/libnvram_sec.so|afd74aedc4e105488aeeaf309b076be1631eeb34
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so|48a4f21323851cc7be7ce266dc3c8ae293e7b3ab
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|d6fc7f16b33aa8a89ad5ab1c6e8f11ff00e7fadb
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|59f418dad1e81a243873f60e73ff801c7445acde
+# NVRAM - from infinix x655f 10
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
+vendor/bin/atcid
+vendor/bin/nvram_daemon
+vendor/etc/init/atcid.rc
+vendor/etc/init/nvram_daemon.rc
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib/libcustom_nvram.so
+vendor/lib/libnvram.so
+vendor/lib/libnvram_daemon_callback.so
+vendor/lib/libnvram_platform.so
+vendor/lib/libnvram_sec.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib64/libcustom_nvram.so
+vendor/lib64/libnvram.so
+vendor/lib64/libnvram_daemon_callback.so
+vendor/lib64/libnvram_platform.so
+vendor/lib64/libnvram_sec.so
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
@@ -852,9 +861,9 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
-# Radio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
-vendor/lib64/libsysenv.so|8faeff48161ab28d948256d543abdb2a8f08fa99
+# Radio - from infinix x655f 10
+vendor/lib/libsysenv.so
+vendor/lib64/libsysenv.so
 
 # Radio (Configs)
 etc/apdb/APDB_MT6765_S01__W1925:vendor/etc/apdb/APDB_MT6765_S01__W1925
