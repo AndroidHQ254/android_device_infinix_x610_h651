@@ -1,4 +1,6 @@
 # MTK platform .rc configure
+
+import /vendor/etc/init/microtrust.rc
 import /system/etc/init/init.safailnet.rc
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6765.usb.rc
@@ -11,7 +13,6 @@ on early-init
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 5 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
-
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
@@ -21,22 +22,30 @@ on init
     chown root system /dev/stune/io
     chown root system /dev/stune/io/tasks
     chmod 0664 /dev/stune/io/tasks
-    
-    # Temp Backward compatibility
+
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
+    # if primary storage is physical, set ro.vold.primary_physical to 1
+    # setprop ro.vold.primary_physical 1
+
+# Temp Backward compatibility
     mkdir /mnt/vendor/protect_f 0771 system system
     mkdir /mnt/vendor/protect_s 0771 system system
     mkdir /mnt/vendor/nvcfg 0771 system system
 
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
     mkdir /tranfs 0771 system system
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
 
-    # Create nvdata mount point
+#Create nvdata mount point
     mkdir /mnt/vendor/nvdata 0771 system system
-    # Create CIP mount point
+# Create CIP mount point
     mkdir /custom
 
-    # change lk_env permission
+    mkdir /mnt/cd-rom 0000 system system
+
+# change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
 
@@ -51,12 +60,8 @@ on init
     write /dev/cpuset/system-background/cpus 2-7
     write /dev/cpuset/top-app/cpus 0-7
 
-    # update bg rt_runtime 100ms
+# update bg rt_runtime 100ms
     write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 100000
-
-    # FPSGO FBT Game
-    insmod /vendor/lib/modules/fpsgo.ko
-    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
 
     # Logger
     start boot_log
@@ -65,12 +70,6 @@ on init
 
 on late-init
     write /proc/bootprof "INIT:late-init"
-
-    write /dev/stune/schedtune.boost 1100
-    write /dev/stune/foreground/schedtune.boost 1100
-    write /dev/stune/background/schedtune.boost 1100
-    write /dev/stune/top-app/schedtune.boost 1100
-    write /dev/stune/rt/schedtune.boost 1100
 
 # enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
@@ -117,8 +116,10 @@ on fs
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
     swapon_all /vendor/etc/fstab.mt6765
-    write /proc/sys/vm/swappiness 60
-    write /proc/sys/vm/direct_swappiness 50
+
+on fs
+
+   mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
@@ -130,7 +131,10 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 1100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "4 1100"
 
-    # change permission for engineer mode
+    # Support legacy paths
+    symlink /sdcard /storage/sdcard0
+
+    #change permission for engineer mode
     chown radio system /proc/freqhopping/dramc
     chown radio system /proc/freqhopping/dumpregs
     chown radio system /proc/freqhopping/freqhopping_debug
@@ -143,7 +147,7 @@ on post-fs
     symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a
     symlink /dev/block/mmcblk0boot1 /dev/block/platform/bootdevice/by-name/preloader_b
 
-    # change owner
+# change owner
     chown system system /proc/bootprof
     chmod 0664 /proc/bootprof
     chown root system /proc/mtprof/cputime
@@ -178,12 +182,13 @@ on post-fs-data
     chown system system /mnt/vendor/nvcfg/fg/old_fg_data
     chown system system /mnt/vendor/nvcfg/fg/car_tune_value
 
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
     chown system system /tranfs
     chmod 0777 /tranfs
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
 
     # create basic filesystem structure
+    # mkdir /mnt/vendor/nvdata 2770 root system
     # We chown/chmod /mnt/vendor/nvdata again so because mount is run as root + defaults
     chown root system /mnt/vendor/nvdata
     chmod 0771 /mnt/vendor/nvdata
@@ -214,25 +219,32 @@ on post-fs-data
     chown root system /data/vendor/camera_dump
     chmod 0771 /data/vendor/camera_dump
 
-    # Create flicker mount point
+    #Create flicker mount point
     mkdir /data/vendor/flicker
     chown root system /data/vendor/flicker
     chmod 0771 /data/vendor/flicker
 
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 start
     restorecon_recursive /tranfs
-    # add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
+#add XLLSHLSSP-17 by shentao.yang for porting f2fs 20180925 end
 
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /mnt/vendor/nvdata
 
-    # give system access to rfkill device node
+
+    # Give system access to rfkill device node
     chmod 0660 /dev/rfkill
 
-    # GPS
+    # Create for muxd pts device node , to operate without root
+    mkdir /dev/radio 0770 radio radio
+
+
+# GPS
     chmod 0775 /vendor/xbin/MPED
     chmod 0666 /dev/gps_emi
 
+# -----------------------
+# Add by MTK
     # SCP log
     chmod 0220 /sys/class/misc/scp/scp_mobile_log
     chown root system /sys/class/misc/scp/scp_mobile_log
@@ -248,7 +260,6 @@ on post-fs-data
     chown root system /dev/sspm
 
     # radvd
-    mkdir /data/misc/radvd 0770 system system
     chmod 444 /etc/radvd/radvd.conf
 
     # Mali 3D GPU driver
@@ -276,20 +287,25 @@ on post-fs-data
     # set ptmx group to non-root
     chown root radio /dev/ptmx
 
-    # RTC
-    mkdir /data/misc/rtc 0770 system system
 
     # M4U
     chmod 0444 /dev/m4u
 
-    # set mlock limit to infinate (for m4u operation)
+    #set mlock to 64MB for netd
+    setrlimit 8 67108864 67108864
+
+    #set mlock limit to infinate (for m4u operation)
     setrlimit 8 -1 -1
 
     # CMDQ
     chmod 0644 /dev/mtk_cmdq
     chown system system /dev/mtk_cmdq
 
-    # OFFLOAD SERVICE
+    # MDP SYNC
+    chmod 0660 /dev/mdp_sync
+    chown system system /dev/mdp_sync
+
+    #OFFLOAD SERVICE
     chmod 0640 /dev/offloadservice
     chown media media /dev/offloadservice
 
@@ -298,14 +314,17 @@ on post-fs-data
     chown media media /dev/audio_ipi
     chown audioserver audio /sys/bus/platform/devices/rt5509_param.0/prop_param
     chown audioserver audio /sys/bus/platform/devices/rt5509_param.1/prop_param
+    chown audioserver audio /sys/bus/platform/devices/mt6660-param.0/prop_params
+
 
     # Accdet
     chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
-    # Fingerprint
+    #Fingerprint
     chmod 0666 /dev/goodix_fp
 
-    # VideoCodec
+    #VideoCodec
+    #insmod /vendor/lib/modules/vcodec_kernel_driver.ko
     chmod 0666 /dev/Vcodec
     chown mediacodec system /dev/Vcodec
 
@@ -313,7 +332,7 @@ on post-fs-data
     chmod 0660 /dev/MJC
     chown media system /dev/MJC
 
-    # kpd
+    # KPD
     chown radio radio /sys/devices/platform/mtk-kpd/driver/kpd_call_state
 
     # Charging Battery
@@ -323,11 +342,11 @@ on post-fs-data
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_stop
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_ut
 
-    # BSP: Add XLYLHLWY-12 by yongqing.dou 20181018 start
-    chmod 0666 /sys/devices/platform/tran_battery/OTG_CTL
+    #BSP: Add XLYLHLWY-12 by yongqing.dou 20181018 start
+	chmod 0666 /sys/devices/platform/tran_battery/OTG_CTL
     #BSP: Add XLYLHLWY-12 by yongqing.dou 20181018 end
 
-    # MDDB
+    #MDDB
     mkdir /data/vendor/meta 0777 root root
     mkdir /data/vendor/meta/mddb 0777 root root
 
@@ -382,10 +401,10 @@ on post-fs-data
     chown root diag /sys/bus/platform/drivers/eint/current_eint
 
     # Display
-    chmod 0660 /dev/graphics/fb0
+    chmod 0664 /dev/graphics/fb0
     chown system graphics /dev/graphics/fb0
 
-    chmod 0660 /dev/mtk_disp_mgr
+    chmod 0664 /dev/mtk_disp_mgr
     chown system graphics /dev/mtk_disp_mgr
 
     chmod 0660 /dev/mtkfb_vsync
@@ -398,7 +417,7 @@ on post-fs-data
     chown root diag /vendor/bin/baseband_regdump
     chmod 4750 /vendor/bin/baseband_regdump
 
-    # pmu
+    # Pmu
     chown root radio /sys/devices/platform/mt-pmic/pmic_access_bank0
     chown root radio /sys/devices/platform/mt-pmic/pmic_access_bank1
     chown root radio /sys/devices/platform/mt6311-user/mt6311_access
@@ -428,6 +447,9 @@ on post-fs-data
     # FM Radio device node
     chmod 0660 /dev/fm
     chown media media /dev/fm
+    #TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 start
+    chmod 0666 /dev/fm
+    #TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 end
 
     # device info /proc interface
     chmod 0440 /dev/devmap
@@ -436,8 +458,7 @@ on post-fs-data
     # bluetooth
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
-
-    # Use uinput's default permission
+    #Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
     # UIBC
@@ -460,13 +481,11 @@ on post-fs-data
     # ANC SERVICE
     chmod 0640 /dev/ancservice
     chown media media /dev/ancservice
-
-    # [ITD] add KBBAEA-233 by luokun 20190213 start
+#[ITD] add KBBAEA-233 by luokun 20190213 start
     mkdir /data/vendor/skin 0777 system system
-    # [ITD] add KBBAEA-233 by luokun 20190213 end
-
-    # ITD:modify for KBSHLES-333 by wei.miao 20181113 start
-    # westalgo dual camera
+#[ITD] add KBBAEA-233 by luokun 20190213 end
+#ITD:modify for KBSHLES-333 by wei.miao 20181113 start
+    #westalgo dual camera
     mkdir /data/vendor/westalgo 0777 system system
     copy /vendor/etc/cache_data /data/vendor/westalgo/cache_data
     copy /vendor/etc/megviisegment_model /data/vendor/westalgo/megviisegment_model
@@ -475,18 +494,15 @@ on post-fs-data
     chmod 0766 /data/vendor/westalgo/cache_data
     chmod 0766 /data/vendor/westalgo/megviisegment_model
     chmod 0766 /data/vendor/westalgo/model_mdl_cache
-    # ITD:modify for KBSHLES-333 by wei.miao 20181113 end
-
-    # ITD:add arcsoft by yuanchen.qiu 20190425 start
+#ITD:modify for KBSHLES-333 by wei.miao 20181113 end
+#ITD:add arcsoft by yuanchen.qiu 20190425 start
     mkdir /data/vendor/arcsoft 0777 system system
-    # ITD:add arcsoft by yuanchen.qiu 20190425 end
-
-    # ITD:Add Midtest Mian3 Failed By Jesse 190525 Start
+#ITD:add arcsoft by yuanchen.qiu 20190425 end
+#ITD:Add Midtest Mian3 Failed By Jesse 190525 Start
     chmod root /sys/class/main2_light/main2_light/main2_light
     chmod 0666 /sys/class/main2_light/main2_light/main2_light
-    # ITD:Add Midtest Mian3 Failed By Jesse 190525 End
-
-    # Camera
+#ITD:Add Midtest Mian3 Failed By Jesse 190525 End
+    #Camera
     chmod 0660 /dev/camera-sysram
     chmod 0660 /dev/camera-isp
     chmod 0660 /dev/camera-tsf
@@ -498,7 +514,7 @@ on post-fs-data
     chmod 0660 /dev/kd_camera_hw_bus2
     chmod 0660 /dev/FM50AF
     chmod 0660 /dev/CAM_CAL_DRV
-    chmod 0660 /dev/CAM_CAL_DRV2
+	chmod 0660 /dev/CAM_CAL_DRV2
     chmod 0660 /dev/MAINAF
     chmod 0660 /dev/MAIN2AF
     chmod 0660 /dev/SUBAF
@@ -515,7 +531,7 @@ on post-fs-data
     chown system camera /dev/kd_camera_hw_bus2
     chown system camera /dev/FM50AF
     chown system camera /dev/CAM_CAL_DRV
-    chown system camera /dev/CAM_CAL_DRV2
+	chown system camera /dev/CAM_CAL_DRV2
     chown system camera /dev/MAINAF
     chown system camera /dev/MAIN2AF
     chown system camera /dev/SUBAF
@@ -553,7 +569,8 @@ on post-fs-data
     chmod 0660 /dev/mtk_dfrc
     chown system graphics /dev/mtk_dfrc
 
-    #change partition permission
+   #change partition permission
+
     chmod 0640 /mtd@sec_ro
     chown root system /mtd@sec_ro
 
@@ -595,7 +612,7 @@ on post-fs-data
     chmod 0660 /proc/driver/otp
     chown root system /proc/driver/otp
 
-    # sn
+    #sn
     chmod 0664 /sys/class/android_usb/android0/iSerial
     chown root system /sys/class/android_usb/android0/iSerial
     chmod 0664 /sys/class/udc/musb-hdrc/device/cmode
@@ -606,11 +623,15 @@ on post-fs-data
 
     chmod 0666 /dev/exm0
 
-	# Thermal
+
+	#Thermal
 	mkdir /data/vendor/.tp/ 0775 system system
 
     # power manager
     write /sys/power/pm_async 0
+
+# End of adding by MTK drivers
+# -----------------------
 
     # Logger
     start boot_log
@@ -620,29 +641,24 @@ on post-fs-data
 on boot
     write /proc/bootprof "INIT:boot"
 
-    # IO write
-    write /proc/sys/vm/dirty_writeback_centisecs 3000
-    write /proc/sys/vm/dirty_ratio 10
+    write /proc/sys/vm/dirty_writeback_centisecs 300
+    chmod 0660 /sys/power/autosleep
 
-    # BSP:modify XLYLHLWY-4 by zhijun.ye 20180925 start
+    #BSP:modify XLYLHLWY-4 by zhijun.ye 20180925 start
     chmod 0666 /sys/class/leds/lcd-backlight/brightness
-    # BSP:modify XLYLHLWY-4 by zhijun.ye 20180925 end
-
-    # BSP:add XLLJHBLEW-3 by chenglong.jiang 20181024 start
+    #BSP:modify XLYLHLWY-4 by zhijun.ye 20180925 end
+    #BSP:add XLLJHBLEW-3 by chenglong.jiang 20181024 start
     chmod 0666 /sys/kernel/lcm_debug/mipi_clk
-    # BSP:add XLLJHBLEW-3 by chenglong.jiang 20181024 end
-
-    # BSP:add XWWYLHLYS-3177 by baofu.zhang 20181213 start
+    #BSP:add XLLJHBLEW-3 by chenglong.jiang 20181024 end
+    #BSP:add XWWYLHLYS-3177 by baofu.zhang 20181213 start
     chmod 0666 /sys/kernel/lcm_hbm/lcm_hbm
-    # BSP:add XWWYLHLYS-3177 by baofu.zhang 20181213 end
-
-    # BSP:add ASQHLYB-2421 by baofu.zhang 20190422 start
+    #BSP:add XWWYLHLYS-3177 by baofu.zhang 20181213 end
+    #BSP:add ASQHLYB-2421 by baofu.zhang 20190422 start
     chmod 0666 /sys/kernel/lcm_aod/lcm_aod
-    # BSP:add ASQHLYB-2421 by baofu.zhang 20190422 end
-
+    #BSP:add ASQHLYB-2421 by baofu.zhang 20190422 end
     chown system system /sys/class/leds/lcd-backlight/brightness
 
-    # TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 start
+    #TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 start
     chmod 0666 /dev/MT_pmic_adc_cali
     chmod 0666 /proc/rlkdevinfo
     chmod 0666 /sys/class/leds/red/brightness
@@ -651,13 +667,12 @@ on boot
     chmod 0666 /sys/class/leds/lcd-backlight/brightness
     chmod 0666 /sys/devices/virtual/torch/torch/torch_level
     chmod 0666 /sys/devices/virtual/sub_torch/sub_torch/sub_torch_level
-    # TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 end
-
-    # ITD add CBQHLES-739 by yang.li3 20181114 start
+    #TDD: add XWWYLHLYS-22 by shouhui.li 2018.09.20 end
+#ITD add CBQHLES-739 by yang.li3 20181114 start
     chmod root /sys/class/screen_torch/screen_torch/screen_torch_level
     chmod 0666 /sys/class/screen_torch/screen_torch/screen_torch_level
     chmod 0666 /sys/devices/virtual/screen_torch/screen_torch/screen_torch_level
-    # ITD add CBQHLES-739 by yang.li3 20181114 end
+#ITD add CBQHLES-739 by yang.li3 20181114 end
 
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
@@ -684,16 +699,13 @@ on boot
     chown system system /sys/class/leds/red/trigger
     chown system system /sys/class/leds/green/trigger
     chown system system /sys/class/leds/blue/trigger
-
-    # //TDD:add XWWYWPO-58 by weijia.huang 2018.07.19 start
+    #//TDD:add XWWYWPO-58 by weijia.huang 2018.07.19 start
     chmod 0666 /sys/devices/platform/tran_battery/CHG_CAPACITY_TEST
-    # //TDD:add XWWYWPO-58 by weijia.huang 2018.07.19 end
-
-    # BSP:add XWWYLHLYS-6 by ronghe.cheng 20181029 start
+    #//TDD:add XWWYWPO-58 by weijia.huang 2018.07.19 end
+    #BSP:add XWWYLHLYS-6 by ronghe.cheng 20181029 start
     chmod 0666 /sys/devices/platform/tran_battery/tran_cam
     chmod 0666 /proc/driver/cl_cam_status
-    # BSP:add XWWYLHLYS-6 by ronghe.cheng 20181029 end
-
+    #BSP:add XWWYLHLYS-6 by ronghe.cheng 20181029 end
     # Permission for hibernation
     chown radio system /sys/power/tuxonice
     chown radio system /sys/power/tuxonice/do_hibernate
@@ -792,7 +804,7 @@ on boot
     chown system system /proc/fliperfs/perf
     chmod 0664 /proc/fliperfs/perf
 
-    # perfmgr
+# perfmgr
     chown system system /proc/perfmgr/smart/smart_uevent_enable
     chmod 0660 /proc/perfmgr/smart/smart_uevent_enable
     chown system system /proc/perfmgr/smart/smart_force_isolate
@@ -868,8 +880,9 @@ on boot
     chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
     chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/dram_ctrl/ddr
 
-    # #Netlog tool
-    # change permissions about terminal
+ 
+##Netlog tool
+   #change permissions about terminal
     chown root radio /proc/net/vlan/config
     chmod 0640 /proc/net/vlan/config
     chown root radio /proc/net/ip6_tables_matches
@@ -904,6 +917,11 @@ on boot
 
     stop console
 
+on property:ro.board.platform=mt6753
+    chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1300000
+
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
@@ -928,6 +946,21 @@ on property:vold.decrypt=trigger_shutdown_framework
     setprop dev.bootcomplete 0
 
 
+# Define TCP buffer sizes for various networks
+#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax,
+    setprop net.tcp.buffersize.default 4096,87380,524288,4096,16384,524288
+    setprop net.tcp.buffersize.wifi    524288,1048576,2097152,262144,524288,1048576
+    setprop net.tcp.buffersize.lte     524288,1048576,2097152,262144,524288,1048576
+    setprop net.tcp.buffersize.umts    4094,87380,524288,4096,16384,524288
+    setprop net.tcp.buffersize.hspa    4094,87380,524288,4096,16384,524288
+    setprop net.tcp.buffersize.hsupa   4094,87380,524288,4096,16384,524288
+    setprop net.tcp.buffersize.hsdpa   4094,87380,524288,4096,16384,524288
+    setprop net.tcp.buffersize.hspap   4094,87380,1220608,4096,16384,1220608
+    setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
+    setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
+
+    setprop persist.sys.strictmode.disable 1
+
 # Set enableflags for boot Systrace
 on early-init && property:ro.boot.boot_trace=1
     setprop debug.atrace.tags.enableflags 0x1fffffe
@@ -944,9 +977,6 @@ on property:sys.boot_completed=1
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128
-    #Reinit lmkd to reconfigure lmkd properties
-    setprop lmkd.reinit 1
-
 
 # start EAS+
 on property:sys.boot_completed=1
@@ -979,7 +1009,7 @@ on property:sys.boot_completed=1
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 4
 
     # stop bootprof
-    write /proc/bootprof "0"
+    write /proc/bootprof 0
     write /proc/mtprintk ${persist.vendor.uartconsole.enable}
 
 service pppoe_wlan0 /vendor/bin/launchpppoe
@@ -1020,6 +1050,40 @@ setprop persist.radio.reset_on_switch false
 # set the property of rild.mark_switchuser
 setprop rild.mark_switchuser 0
 
+# MBIMD Service
+service mbimd /vendor/bin/mbimd debug
+    disabled
+    oneshot
+
+# add meta_tst for ATM
+service meta_tst /vendor/bin/meta_tst
+    class main
+    user system
+    group radio gps system wifi audio bluetooth media
+    disabled
+    oneshot
+
+# add loghidl client
+service loghidlsysservice /system/bin/loghidlsysservice
+    class main
+    user root
+    group system
+    disabled
+
+# start meta_tst for ATM
+on property:sys.boot_completed=1 && property:ro.boot.atm=enable
+    start meta_tst
+    start loghidlvendorservice
+    start loghidlsysservice
+
+
+
+# FPSGO FBT Game
+on init
+    insmod /vendor/lib/modules/fpsgo.ko
+    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
+
+# Charger
 service charger /bin/chargeonlymode
     class charger
     critical
@@ -1027,7 +1091,7 @@ service charger /bin/chargeonlymode
     seclabel u:r:healthd:s0
 
 on boot
-# Toggle airplane mode on and off on boot to enable volte.
+    # Toggle airplane mode on and off on boot to enable volte.
     # This hack needs ImsInit commit to request ims on boot to work properly.
 
     exec - root -- /system/bin/sh -c "sleep 3"
