@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.1.vendor \
     android.hardware.radio@1.2.vendor
 
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     MtkInCallService
 
 # Ramdisk

@@ -72,8 +72,8 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/mediatek/alps-4.4
-TARGET_KERNEL_CONFIG := k63v2_64_bsp_defconfig
+#TARGET_KERNEL_SOURCE := kernel/mediatek/alps-4.4
+#TARGET_KERNEL_CONFIG := k63v2_64_bsp_defconfig
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := x610,Infinix-X610,x610_h651
@@ -127,9 +127,10 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_mt6765
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # SEPolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+include device/mediatek/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Malloc
 MALLOC_SVELTE := true
