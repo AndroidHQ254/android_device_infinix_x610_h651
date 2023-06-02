@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.umidigi"
+#define LOG_TAG "android.hardware.light@2.0-service.x610_h651"
 
 #include <hidl/HidlTransportSupport.h>
 

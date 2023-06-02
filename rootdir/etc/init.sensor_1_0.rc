@@ -1,10 +1,11 @@
 # MTK platform .rc configure
 on post-fs-data
+    # calibration
+    mkdir /data/vendor/sensor 0774 system system
     # Sensor
     chmod 0660 /dev/hwmsensor
     chmod 0660 /dev/msensor
     chmod 0660 /dev/gsensor
-    chmod 0660 /dev/mxc4005xc
     chmod 0660 /dev/als_ps
     chmod 0660 /dev/gyroscope
     chmod 0660 /dev/aal_als
@@ -24,11 +25,11 @@ on post-fs-data
     chmod 0660 /dev/m_fusion_misc
     chmod 0660 /dev/m_bio_misc
     chmod 0660 /dev/biometric
+    chmod 0660 /dev/sensorlist
 
     chown system system /dev/hwmsensor
     chown system system /dev/msensor
     chown radio system /dev/gsensor
-    chown system system /dev/mxc4005xc
     chown radio system /dev/als_ps
     chown radio system /dev/gyroscope
     chown system system /dev/aal_als
@@ -48,6 +49,7 @@ on post-fs-data
     chown system system /dev/m_fusion_misc
     chown system system /dev/m_bio_misc
     chown system system /dev/biometric
+    chown system system /dev/sensorlist
 
     chmod 0660 /sys/class/sensor/m_acc_misc/accenablenodata
     chmod 0660 /sys/class/sensor/m_acc_misc/accactive
@@ -92,18 +94,22 @@ on post-fs-data
     chmod 0660 /sys/class/sensor/m_als_misc/alsdelay
     chmod 0660 /sys/class/sensor/m_als_misc/alsbatch
     chmod 0660 /sys/class/sensor/m_als_misc/alsflush
+    chmod 0660 /sys/class/sensor/m_als_misc/alscali
     chmod 0660 /sys/class/sensor/m_ps_misc/psactive
     chmod 0660 /sys/class/sensor/m_ps_misc/psdelay
     chmod 0660 /sys/class/sensor/m_ps_misc/psbatch
     chmod 0660 /sys/class/sensor/m_ps_misc/psflush
+    chmod 0660 /sys/class/sensor/m_ps_misc/pscali
     chown system system /sys/class/sensor/m_als_misc/alsactive
     chown system system /sys/class/sensor/m_als_misc/alsdelay
     chown system system /sys/class/sensor/m_als_misc/alsbatch
     chown system system /sys/class/sensor/m_als_misc/alsflush
+    chown system system /sys/class/sensor/m_als_misc/alscali
     chown system system /sys/class/sensor/m_ps_misc/psactive
     chown system system /sys/class/sensor/m_ps_misc/psdelay
     chown system system /sys/class/sensor/m_ps_misc/psbatch
     chown system system /sys/class/sensor/m_ps_misc/psflush
+    chown system system /sys/class/sensor/m_ps_misc/pscali
 
     chmod 0660 /sys/class/sensor/m_baro_misc/baroenablenodata
     chmod 0660 /sys/class/sensor/m_baro_misc/baroactive

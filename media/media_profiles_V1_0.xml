@@ -10,6 +10,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<!-- ITD: modify for CTS cameraid = 4 by wei.miao 20181121 start -->
 <!DOCTYPE MediaSettings [
 <!ELEMENT MediaSettings (CamcorderProfiles,
                          EncoderOutputFileFormat+,
@@ -22,7 +23,7 @@
 <!ATTLIST EncoderProfile quality (high|low) #REQUIRED>
 <!ATTLIST EncoderProfile fileFormat (mp4|3gp) #REQUIRED>
 <!ATTLIST EncoderProfile duration (30|60) #REQUIRED>
-<!ATTLIST EncoderProfile cameraId (0|1|2|3) #REQUIRED>
+<!ATTLIST EncoderProfile cameraId (0|1|2|3|4) #REQUIRED>
 <!ELEMENT Video EMPTY>
 <!ATTLIST Video codec (h264|h263|m4v) #REQUIRED>
 <!ATTLIST Video bitRate CDATA #REQUIRED>
@@ -68,6 +69,7 @@
 <!ATTLIST AudioDecoderCap name (wma) #REQUIRED>
 <!ATTLIST AudioDecoderCap enabled (true|false) #REQUIRED>
 ]>
+<!-- ITD: modify for CTS cameraid = 4 by wei.miao 20181121 end -->
 <!--
      This file is used to declare the multimedia profiles and capabilities
      on an android-powered device.
@@ -75,17 +77,19 @@
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <CamcorderProfiles cameraId="0">
+    <!-- BSP add: ARC-19 by yong.guo 2019.4.10 start -->
         <EncoderProfile quality="low" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
+    <!-- //BSP add: ARC-19 by yong.guo 2019.4.10 end -->
         <EncoderProfile quality="high" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="17000000"
@@ -97,17 +101,19 @@
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
+        <!-- BSP add: XLYLHLWY-3636 by yong.guo 2019.4.11 start -->
         <EncoderProfile quality="qcif" fileFormat="mp4" duration="30">
-            <Video codec="h263"
+            <Video codec="h264"
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
+        <!-- BSP add: XLYLHLWY-3636 by yong.guo 2019.4.11 end -->
         <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
             <Video codec="m4v"
                    bitRate="1000000"
@@ -168,7 +174,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -190,7 +196,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -295,7 +301,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -317,7 +323,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -383,7 +389,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -405,7 +411,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -471,13 +477,14 @@
         <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
     </CamcorderProfiles>
+<!-- ITD: modify for CTS 2M by wei.miao 20181119 start -->
     <CamcorderProfiles cameraId="2">
         <EncoderProfile quality="low" fileFormat="mp4" duration="30">
             <Video codec="h263"
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -485,9 +492,9 @@
         </EncoderProfile>
         <EncoderProfile quality="high" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="17000000"
-                   width="1920"
-                   height="1080"
+                   bitRate="9000000"
+                   width="1280"
+                   height="720"
                    frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
@@ -499,7 +506,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -549,7 +556,7 @@
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
-        <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
+        <!-- <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="17000000"
                    width="1920"
@@ -559,13 +566,13 @@
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
-        </EncoderProfile>
+        </EncoderProfile> -->
         <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
             <Video codec="h263"
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -573,9 +580,9 @@
         </EncoderProfile>
         <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="17000000"
-                   width="1920"
-                   height="1080"
+                   bitRate="9000000"
+                   width="1280"
+                   height="720"
                    frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
@@ -587,7 +594,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -637,7 +644,7 @@
                    sampleRate="48000"
                    channels="2" />
         </EncoderProfile>
-        <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
+        <!-- <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="17000000"
                    width="1920"
@@ -647,7 +654,7 @@
                    bitRate="128000"
                    sampleRate="48000"
                    channels="2" />
-        </EncoderProfile>
+        </EncoderProfile> -->
         <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="3000000"
@@ -686,13 +693,14 @@
         <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
     </CamcorderProfiles>
+<!-- ITD: modify for CTS 2M by wei.miao 20181119 end -->
     <CamcorderProfiles cameraId="3">
         <EncoderProfile quality="low" fileFormat="mp4" duration="30">
             <Video codec="h263"
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -714,7 +722,7 @@
                    bitRate="192000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="48000"
@@ -780,7 +788,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -802,7 +810,7 @@
                    bitRate="1000000"
                    width="176"
                    height="144"
-                   frameRate="20" />
+                   frameRate="30" />
             <Audio codec="aac"
                    bitRate="64000"
                    sampleRate="48000"
@@ -901,6 +909,223 @@
         <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
     </CamcorderProfiles>
+<!-- ITD: modify for CTS cameraid = 4 by wei.miao 20181121 start -->
+    <CamcorderProfiles cameraId="4">
+        <EncoderProfile quality="low" fileFormat="mp4" duration="30">
+            <Video codec="h263"
+                   bitRate="192000"
+                   width="176"
+                   height="144"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="17000000"
+                   width="1920"
+                   height="1080"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="qcif" fileFormat="mp4" duration="30">
+            <Video codec="h263"
+                   bitRate="192000"
+                   width="176"
+                   height="144"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="qvga" fileFormat="mp4" duration="30">
+            <Video codec="m4v"
+                   bitRate="1000000"
+                   width="320"
+                   height="240"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="cif" fileFormat="mp4" duration="30">
+            <Video codec="m4v"
+                   bitRate="1250000"
+                   width="352"
+                   height="288"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="4500000"
+                   width="640"
+                   height="480"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="9000000"
+                   width="1280"
+                   height="720"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="17000000"
+                   width="1920"
+                   height="1080"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
+            <Video codec="h263"
+                   bitRate="1000000"
+                   width="176"
+                   height="144"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="64000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="17000000"
+                   width="1920"
+                   height="1080"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
+            <Video codec="h263"
+                   bitRate="1000000"
+                   width="176"
+                   height="144"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="64000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapseqvga" fileFormat="mp4" duration="30">
+            <Video codec="m4v"
+                   bitRate="1000000"
+                   width="320"
+                   height="240"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapsecif" fileFormat="mp4" duration="30">
+            <Video codec="m4v"
+                   bitRate="1250000"
+                   width="352"
+                   height="288"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="4500000"
+                   width="640"
+                   height="480"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapse720p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="9000000"
+                   width="1280"
+                   height="720"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="17000000"
+                   width="1920"
+                   height="1080"
+                   frameRate="30" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="3000000"
+                   width="640"
+                   height="480"
+                   frameRate="120" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="highspeedhigh" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="3000000"
+                   width="640"
+                   height="480"
+                   frameRate="120" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <EncoderProfile quality="highspeed480p" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="3000000"
+                   width="640"
+                   height="480"
+                   frameRate="120" />
+            <Audio codec="aac"
+                   bitRate="128000"
+                   sampleRate="48000"
+                   channels="2" />
+        </EncoderProfile>
+        <ImageEncoding quality="95" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
+        <ImageDecoding memCap="20000000" />
+    </CamcorderProfiles>
+<!-- ITD: modify for CTS cameraid = 4 by wei.miao 20181121 end -->
 
     <EncoderOutputFileFormat name="3gp" />
     <EncoderOutputFileFormat name="mp4" />
