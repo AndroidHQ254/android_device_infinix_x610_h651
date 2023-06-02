@@ -1,0 +1,1 @@
+allow bip bip:netlink_route_socket { bind create nlmsg_read write };

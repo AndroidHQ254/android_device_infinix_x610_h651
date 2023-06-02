@@ -1,0 +1,4 @@
+binder_call(audioserver, audioserver)
+binder_call(audioserver, init)
+allow audioserver audioserver:fd use;
+allow audioserver audioserver:fifo_file write;

@@ -1,2 +1,5 @@
 get_prop(rild, rild_ipv6_prop)
 set_prop(rild, rild_ipv6_prop)
+get_prop(rild, default_prop)
+
+allow rild default_android_hwservice:hwservice_manager add;

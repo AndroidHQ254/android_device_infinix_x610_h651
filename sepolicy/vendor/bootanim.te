@@ -1,0 +1,2 @@
+allow bootanim ctl_bootanim_prop:file { getattr open };
+allow bootanim vendor_file:file { execute getattr open read };
