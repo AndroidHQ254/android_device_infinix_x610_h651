@@ -5,13 +5,13 @@ vendor/bin/rttv
 vendor/lib/libdirect-coredump.so
 vendor/lib64/libdirect-coredump.so
 
-# AEE - from infinix x655f 10
-vendor/lib/libaedv.so
-vendor/lib/libladder.so
-vendor/lib/libudf.so
-vendor/lib64/libaedv.so
-vendor/lib64/libladder.so
-vendor/lib64/libudf.so
+# AEE - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/libaedv.so|e119e0d146d1016f34eeefcf2dafe60fe9e02741
+vendor/lib/libladder.so|cc70f0b59a3aa58e9f0f3636744067f8049b1be3
+vendor/lib/libudf.so|531e91cf5be71c0e3f693cada2cbefe151855072
+vendor/lib64/libaedv.so|774237729cd0f9e5179930613ca6ce64d274ea74
+vendor/lib64/libladder.so|b2bdcec4e5095e17f77873ab85d0b2a35ad281cc
+vendor/lib64/libudf.so|ead7cd41d63bb57a9b60a4655ba9c73af18d661d
 
 # APN
 etc/apns-conf.xml:product/etc/apns-conf.xml
@@ -44,9 +44,9 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 
-# Audio - from infinix x655f 10
-vendor/lib/libtinyxml.so
-vendor/lib64/libtinyxml.so
+# Audio - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/libtinyxml.so|408c60ab781a52688b4d29f52996680c9d79f577
+vendor/lib64/libtinyxml.so|0c42e06457fcbee48fa3a45c038e839a42aca9b2
 
 # Audio (Bin)
 vendor/bin/audiocmdservice_atci
@@ -439,15 +439,15 @@ vendor/lib/libmtk_drvb.so
 vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
-# DRM (Hardware) - from infinix x655f 10
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+# DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|2491689eba91885a5e61f6c83f35f0c4c64f52d8
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|4f1ad71da5ebf504396017f1748cdf39d212523e
 
-# DRM (Widevine) - from infinix x655f 10
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libwvhidl.so
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
+# DRM (Widevine) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/mediadrm/libwvdrmengine.so|68004b6e8e1d3bbe59d3b345b3304d6751eae51c
+vendor/lib/libwvhidl.so|14e023e6a121e72f22ff3fc978d4229953af36d1
+vendor/lib64/mediadrm/libwvdrmengine.so|34e71c43e30cd9d6d45d31dde7da0bfb1a80112d
+vendor/lib64/libwvhidl.so|6c301c3bab59eb69ba0393d7141117dab4cde798
 
 # Display
 vendor/lib/hw/gralloc.default.so
@@ -548,7 +548,6 @@ vendor/bin/stroke|381951f174bd7dfdc1736b183086a2e7316646d4
 vendor/etc/init/android.hardware.gnss@2.0-service-mediatek.rc|5b2557a9bbd8883da02f5a790d5172c428de8ea6
 vendor/etc/init/ipsec_mon.rc|4ce4285571810f6aed38ce1db4f60a6b35a637f0
 vendor/etc/init/lbs_hidl_service.rc|fb88d4559374ae12dc8a9513189b6c6ff1a33bde
-vendor/etc/init/mtk_agpsd.rc|e7102cbf2a72f7e61db432f9bfc4a2ec9c0f9ec0
 vendor/etc/init/mtk_agpsd_p.rc|305c5521d2e9a4d4be7abcc211611b984a0a44d9
 vendor/etc/agps_profiles_conf2.xml|58c74c3887e251b7818666d282a74ac0420f7ec6
 vendor/etc/slp_conf|8e0eeb966b5f1f2d506342aae276cbf3cd115039
@@ -786,30 +785,30 @@ vendor/lib/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
-# NVRAM - from infinix x655f 10
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/bin/atcid
-vendor/bin/nvram_daemon
-vendor/etc/init/atcid.rc
-vendor/etc/init/nvram_daemon.rc
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib/libcustom_nvram.so
-vendor/lib/libnvram.so
-vendor/lib/libnvram_daemon_callback.so
-vendor/lib/libnvram_platform.so
-vendor/lib/libnvram_sec.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
-vendor/lib64/libcustom_nvram.so
-vendor/lib64/libnvram.so
-vendor/lib64/libnvram_daemon_callback.so
-vendor/lib64/libnvram_platform.so
-vendor/lib64/libnvram_sec.so
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
+# NVRAM - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|4647332e67a708ed05a55cde03d4f28e0f9a7ca0
+vendor/bin/atcid|a0abc02bc946527faccb76b13979131790fab5e6
+vendor/bin/nvram_daemon|d51bbf2f890986cc186521904656f1008700e278
+vendor/etc/init/atcid.rc|1a1f52c9d23d55f14095b27f3985992113a0489c
+vendor/etc/init/nvram_daemon.rc|4940f23927dd9b719c34174b337c650bb346e7b8
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|2431976234b3810d42c534245da2a2a147373d90
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|97667796a81cbda73acfb88eea4074047a7bfd20
+vendor/lib/libcustom_nvram.so|1f608e1c11ecadbfb7fe6af38e5949e6c07b2d78
+vendor/lib/libnvram.so|e752de94152b94d0f1b6fba058d25e1e6d7950dc
+vendor/lib/libnvram_daemon_callback.so|d456d91714fa13e74c31a53f7cc766739293ebe2
+vendor/lib/libnvram_platform.so|5971bc2bdf97437b94aa72dd99e5ec767cdc677c
+vendor/lib/libnvram_sec.so|749a310306fbfc85945e0643197b99bf11688e36
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so|cee6fdc9b55f2bf16666f84259a9a799dd5d37ec
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|6903fc646e584ab09c6d0ca72121405a9e449c59
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|ea11075354b4c8e3407bd4ffc539ae2eed2cea2e
+vendor/lib64/libcustom_nvram.so|3d4d83b5e5b26be92d4b92867c4a0978387638bd
+vendor/lib64/libnvram.so|93048858923d57c453d279436aaa8beb41be583f
+vendor/lib64/libnvram_daemon_callback.so|b36a3b57ae92a2652aea27739854699931119a8c
+vendor/lib64/libnvram_platform.so|978da8cc39f34bf77adb8ba4f90327268734a3b3
+vendor/lib64/libnvram_sec.so|4a78a21161f078c0635571f4974d8dd5793a88b6
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so|f6e33e3f86731925ba214bf6fde77251b40ec4db
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|174612995181364a25923d02dd754aa012c41e8b
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|ca9750a4ffed4e49a2255d769fba61168f04a4b4
 
 # Power
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
@@ -938,9 +937,9 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.7.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
-# Radio - from infinix x655f 10
-vendor/lib/libsysenv.so
-vendor/lib64/libsysenv.so
+# Radio - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+vendor/lib/libsysenv.so|6060856592ba69c93f414e0b0eb091a5b1e31a19
+vendor/lib64/libsysenv.so|bc48bacc3b7becee739f7e770fe4dd13683c605d
 
 # Radio (Configs)
 etc/apdb/APDB_MT6765_S01__W1925:vendor/etc/apdb/APDB_MT6765_S01__W1925
