@@ -546,10 +546,10 @@ vendor/bin/mtk_agpsd|6ba130f1794674a8889460a29fa73d1d4c2843c6
 vendor/bin/starter|0b7f772800267fafcfb6980a577fa4712df7abaf
 vendor/bin/stroke|e570655cbb1eebb24a8ccd46fb965512dd13f06d
 vendor/etc/init/android.hardware.gnss@2.0-service-mediatek.rc|8c26380924f7f7fe99d8cc57bd9dbee88220a5de
-vendor/etc/init/ipsec_mon.rc|70b28c9824ea6d698a3607b6d89050b831a8f1f1
+vendor/etc/init/ipsec_mon.rc|4ce4285571810f6aed38ce1db4f60a6b35a637f0
 vendor/etc/init/lbs_hidl_service.rc|fb88d4559374ae12dc8a9513189b6c6ff1a33bde
-vendor/etc/init/mtk_agpsd_p.rc|3481889bff76bfe8d15bb08a5c8a723be0fb7490
-vendor/etc/agps_profiles_conf2.xml|95b2a2962b0942f9a830607cd588a7f507ffcecf
+vendor/etc/init/mtk_agpsd_p.rc|305c5521d2e9a4d4be7abcc211611b984a0a44d9
+vendor/etc/agps_profiles_conf2.xml|2719265a2e3065127e006054f3d16ef17d684c5e
 vendor/etc/slp_conf|8e0eeb966b5f1f2d506342aae276cbf3cd115039
 vendor/lib/hw/flp.default.so|0e9b40d07c3a0a8df35dc0464d57ab66a713db5f
 vendor/lib/hw/gps.default.so|676a1f8a66ac8b976944a3b1f3c62ec42d481681
@@ -665,7 +665,7 @@ vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # IMS - from treble.phh.me (android 12)
--priv-app/ImsService/ImsService.apk|a2ea43af16be841005db332184fa444a98206e3b
+-priv-app/ImsService/ImsService.apk|63f760bc9c8e798f84077018555c179b6d998873
 
 # Jpeg
 vendor/bin/jpegtool
@@ -789,9 +789,9 @@ vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|4647332e67a708ed05a55cde03d4f28e0f9a7ca0
 vendor/bin/atcid|a0abc02bc946527faccb76b13979131790fab5e6
 vendor/bin/nvram_daemon|d51bbf2f890986cc186521904656f1008700e278
-vendor/etc/init/atcid.rc|1a1f52c9d23d55f14095b27f3985992113a0489c
-vendor/etc/init/nvram_daemon.rc|4940f23927dd9b719c34174b337c650bb346e7b8
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|2431976234b3810d42c534245da2a2a147373d90
+vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
+vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|97667796a81cbda73acfb88eea4074047a7bfd20
 vendor/lib/libcustom_nvram.so|1f608e1c11ecadbfb7fe6af38e5949e6c07b2d78
 vendor/lib/libnvram.so|e752de94152b94d0f1b6fba058d25e1e6d7950dc
