@@ -682,6 +682,10 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Kmsetkey
+vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/kmsetkey.mt6765.so
+vendor/lib64/hw/kmsetkey.default.so
+vendor/lib64/hw/kmsetkey.mt6765.so
 vendor/lib64/libkmsetkey.so
 
 # Kernel Modules
