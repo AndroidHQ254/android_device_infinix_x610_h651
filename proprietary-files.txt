@@ -443,7 +443,6 @@ vendor/lib64/libmtk_drvb.so
 # DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.2-service.widevine.xml
 
 # DRM (Widevine) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
 vendor/lib/mediadrm/libwvdrmengine.so
@@ -522,6 +521,12 @@ vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/lib/libfgauge_gm30.so
 
+# GNNS
+vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
+vendor/etc/init/vendor.mediatek.hardware.gnss@1.1-service.rc
+vendor/lib64/hw/vendor.mediatek.hardware.gnss@1.1-impl.so
+vendor/lib64/vendor.mediatek.hardware.gnss@1.1.so
+
 # GPS
 vendor/lib/libapmonitor_vendor.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@1.0.so
@@ -529,7 +534,6 @@ vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
 
 # GPS - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
-vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
 vendor/bin/charon
 vendor/bin/ipsec_mon
 vendor/bin/lbs_hidl_service
@@ -540,7 +544,6 @@ vendor/bin/stroke
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/init/mtk_agpsd_p.rc
-vendor/etc/init/vendor.mediatek.hardware.gnss@1.1-service.rc
 vendor/etc/agps_profiles_conf2.xml
 vendor/etc/slp_conf
 vendor/lib/hw/flp.default.so
@@ -555,14 +558,12 @@ vendor/lib/libsimaka.so
 vendor/lib/libstrongswan.so
 vendor/lib64/hw/flp.default.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/hw/vendor.mediatek.hardware.gnss@1.1-impl.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/libcharon-ss.so
 vendor/lib64/libhydra.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libsimaka.so
 vendor/lib64/libstrongswan.so
-vendor/lib64/vendor.mediatek.hardware.gnss@1.1.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # GPS (Certs)
