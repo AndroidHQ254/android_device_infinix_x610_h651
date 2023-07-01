@@ -221,6 +221,8 @@ lib64/libarcsoft_wideselfie.so
 vendor/etc/cache_data
 vendor/etc/megviisegment_model
 vendor/etc/model_mdl_cache
+vendor/lib/gc8034_mipi_raw_tuning.so
+vendor/lib/gc8034b_mipi_raw_tuning.so
 vendor/lib/libJpgDecPipe.so
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libSwJpgCodec.so
@@ -228,9 +230,19 @@ vendor/lib/libmhalImageCodec.so
 vendor/lib/libmtkcam.eventcallback.so
 vendor/lib/libmtkcam_stdutils.so
 vendor/lib/libstdc++.so
+vendor/lib/s5k3p9sp_mipi_raw_tuning.so
+vendor/lib/s5k3p9spb_mipi_raw_tuning.so
+vendor/lib/s5k3p9sx_mipi_raw_tuning.so
+vendor/lib/s5k3p9sxb_mipi_raw_tuning.so
+vendor/lib/sp250a_mipi_raw_tuning.so
+vendor/lib/sp250ab_mipi_raw_tuning.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.ccap@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
+vendor/lib64/gc8034_mipi_raw_IdxMgr.so
+vendor/lib64/gc8034_mipi_raw_tuning.so
+vendor/lib64/gc8034b_mipi_raw_IdxMgr.so
+vendor/lib64/gc8034b_mipi_raw_tuning.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
 vendor/lib64/lib3a.af.core.so
@@ -244,7 +256,10 @@ vendor/lib64/lib3a.gma.so
 vendor/lib64/lib3a.lce.so
 vendor/lib64/lib3a.log.so
 vendor/lib64/lib3a.n3d3a.so
+vendor/lib64/libCheckLeak.so
+vendor/lib64/libImageEval.so
 vendor/lib64/libJpgEncPipe.so
+vendor/lib64/libMtkSImage.so
 vendor/lib64/libSonyIMX230PdafLibrary.so
 vendor/lib64/libSonyIMX230PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX338PdafLibrary.so
@@ -253,11 +268,27 @@ vendor/lib64/libSonyIMX386PdafLibrary.so
 vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
+vendor/lib64/libTranArcDro.so
+vendor/lib64/libTranArcFilter.so
+vendor/lib64/libTranArcHDR.so
+vendor/lib64/libTranArcLowLight.so
+vendor/lib64/libTranArcPicselfie.so
+vendor/lib64/libTranDenoise.so
+vendor/lib64/libTranExtImgProc.so
+vendor/lib64/libTranFaceBeauty.so
+vendor/lib64/libTranPlatHW.so
+vendor/lib64/libTranSTSingleBlur.so
+vendor/lib64/libTranUndistort.so
+vendor/lib64/libTranVDSceneDetector.so
+vendor/lib64/libVDSceneDetector.so
+vendor/lib64/libWaterMarkProc.so
+vendor/lib64/libamipengine.so
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_dro.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
 vendor/lib64/libarcsoft_low_light_shot.so
 vendor/lib64/libarcsoft_picselfie_algorithm.so
+vendor/lib64/libcalculatesharpness.so
 vendor/lib64/libcam.feature_utils.so
 vendor/lib64/libcam.hal3a.cctsvr.so
 vendor/lib64/libcam.hal3a.log.so
@@ -292,11 +323,15 @@ vendor/lib64/libcamdrv_twin.so
 vendor/lib64/libcameracustom.eis.so
 vendor/lib64/libcameracustom.plugin.so
 vendor/lib64/libcameracustom.so
+vendor/lib64/libdcs_aesync.so
+vendor/lib64/libdenoise.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
+vendor/lib64/libmegsegment.so
 vendor/lib64/libmfllcore.so
+vendor/lib64/libmpbase.so
 vendor/lib64/libmtkcam.eventcallback.so
 vendor/lib64/libmtkcam.featurepipe.capture.so
 vendor/lib64/libmtkcam.featurepipe.streaming.so
@@ -342,7 +377,27 @@ vendor/lib64/libmtkcam_sysutils.so
 vendor/lib64/libmtkcam_tsf.so
 vendor/lib64/libmtkcam_tuning_utils.so
 vendor/lib64/libmtkcam_ulog.so
+vendor/lib64/libstblur_capture_api.so
+vendor/lib64/libstereoinfoaccessor_vsdof.so
+vendor/lib64/libtranssion_beauty.so
+vendor/lib64/libundistort_64.so
+vendor/lib64/libwa_depth.so
+vendor/lib64/libwa_megface.so
+vendor/lib64/libwa_refocus.so
+vendor/lib64/libwa_rtdof.so
 vendor/lib64/libwestalgo_cal.so
+vendor/lib64/s5k3p9sp_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sp_mipi_raw_tuning.so
+vendor/lib64/s5k3p9spb_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9spb_mipi_raw_tuning.so
+vendor/lib64/s5k3p9sx_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sx_mipi_raw_tuning.so
+vendor/lib64/s5k3p9sxb_mipi_raw_IdxMgr.so
+vendor/lib64/s5k3p9sxb_mipi_raw_tuning.so
+vendor/lib64/sp250a_mipi_raw_IdxMgr.so
+vendor/lib64/sp250a_mipi_raw_tuning.so
+vendor/lib64/sp250ab_mipi_raw_IdxMgr.so
+vendor/lib64/sp250ab_mipi_raw_tuning.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
@@ -365,8 +420,8 @@ vendor/lib64/libfeature_fsc.so
 vendor/lib64/libfeature_lmv.so
 vendor/lib64/libfeature_rss.so
 
-# Charger - from Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.1.0.RJOMIXM:user/release-keys
-bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
+# Charger
+bin/charger:bin/chargeonlymode
 
 # Dfps
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
@@ -379,13 +434,15 @@ vendor/lib64/hw/vendor.mediatek.hardware.dfps@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.dfps@1.0.so
 
 # DRM-Hardware
+vendor/lib/libdrm.so
 vendor/lib/libmtk_drvb.so
+vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
 # DRM (Hardware) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine|bb1ee465a6608d2704fbe9a787acbc7c4dc0aa85
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.1-service.widevine.xml
 
 # DRM (Widevine) - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
 vendor/lib/mediadrm/libwvdrmengine.so|6828d27a19ef358097936e3cca808afc699226e4
@@ -404,6 +461,7 @@ vendor/lib/libgpu_aux.so
 vendor/lib/libgralloc_extra.so
 vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
+vendor/lib/libmemtrack_GL.so
 vendor/lib/libminiui.so
 vendor/lib/libpixelflinger.so
 vendor/lib64/hw/gralloc.default.so
@@ -417,6 +475,7 @@ vendor/lib64/libgpu_aux.so
 vendor/lib64/libgralloc_extra.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
+vendor/lib64/libmemtrack_GL.so
 vendor/lib64/libminiui.so
 vendor/lib64/libpixelflinger.so
 
@@ -463,41 +522,41 @@ vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@1.0.so
 
 # GPS - from UMIDIGI/A7_Pro/A7_Pro:10/QP1A.190711.020/2208022127:user/release-keys
-vendor/bin/hw/android.hardware.gnss@2.0-service-mediatek|df0b40ea71db8d0b9e2d0419163d9b41f3ea1c4a
-vendor/bin/charon|981725377e797d87d8151252b1451fe29b4ae4e9
-vendor/bin/ipsec_mon|0958466ff1200a830bb89eb5204840ace04cbcca
-vendor/bin/lbs_hidl_service|84341491f8c95a32d7f0856a44491c04920c187f
-vendor/bin/mnld|5d28c9f571224e600b086bff11ffbc5fd7cde23b
-vendor/bin/mtk_agpsd|978d538361fcce94d37ac5e67dc95e6ecca157bc
-vendor/bin/starter|b807068a0114ca086ea24a16a7e20017c68a41f4
-vendor/bin/stroke|381951f174bd7dfdc1736b183086a2e7316646d4
-vendor/etc/init/android.hardware.gnss@2.0-service-mediatek.rc|5b2557a9bbd8883da02f5a790d5172c428de8ea6
-vendor/etc/init/ipsec_mon.rc|4ce4285571810f6aed38ce1db4f60a6b35a637f0
-vendor/etc/init/lbs_hidl_service.rc|fb88d4559374ae12dc8a9513189b6c6ff1a33bde
-vendor/etc/init/mtk_agpsd.rc|e7102cbf2a72f7e61db432f9bfc4a2ec9c0f9ec0
-vendor/etc/init/mtk_agpsd_p.rc|305c5521d2e9a4d4be7abcc211611b984a0a44d9
-vendor/etc/agps_profiles_conf2.xml|58c74c3887e251b7818666d282a74ac0420f7ec6
-vendor/etc/slp_conf|8e0eeb966b5f1f2d506342aae276cbf3cd115039
-vendor/lib/hw/flp.default.so|0e9b40d07c3a0a8df35dc0464d57ab66a713db5f
-vendor/lib/hw/gps.default.so|676a1f8a66ac8b976944a3b1f3c62ec42d481681
-vendor/lib/libDR.so|dc060a15256c0fb28586349c5fbed273d59e2feb
-vendor/lib/libcharon-ss.so|82923c987a6bbf1c5def55a70791d848aa11e85c
-vendor/lib/libgeofence.so|fc4dbe06aaa6247874a7c275faab3f5930454ac5
-vendor/lib/libhydra.so|d4ebec7db3e6014d049c1b294a50ea4b33fb9246
-vendor/lib/libipsec_ims_shr.so|43534db4a27917eb7de5b48bf724d453d057ca80
-vendor/lib/libmnl.so|56a1b9b02526572aaa16eedb6d44db3b3df3dfa0
-vendor/lib/libsimaka.so|78077b5a05fb5805c68b5dd478eb15f1214b01a4
-vendor/lib/libstrongswan.so|f2e6fb5edd747c7a57034212aa89bc49e0302363
-vendor/lib64/hw/android.hardware.gnss@2.0-impl-mediatek.so|6e7d4030c6a58ccf28e0e5f64ac489346fb8d408
-vendor/lib64/hw/flp.default.so|4723e72aece3b035bf54c3dc7302f51bce346eb8
-vendor/lib64/hw/gps.default.so|05f9642029129cb3e44bbac23013474a30233007
-vendor/lib64/lbs_hidl_service-impl.so|ceb25f518e72a3b14a87ae2b42e9fc4841ac7dae
-vendor/lib64/libcharon-ss.so|e7d177840d0a8ee1477c4689b0ebcd48359d2461
-vendor/lib64/libhydra.so|a5d05786be8bf7ac558b3058aae5c23bd03d2882
-vendor/lib64/libipsec_ims_shr.so|0ae207080ae5932fd10a91a4eeca3333ba1188d2
-vendor/lib64/libsimaka.so|02e795103dbd326d76ca6c568d20a36f0da85c97
-vendor/lib64/libstrongswan.so|55fc4bc4cfeb2aeb98d2944079dc38adef5798cb
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so|e533ea132ecef2d7979f1f98983a3c337c01b410
+vendor/bin/hw/vendor.mediatek.hardware.gnss@1.1-service
+vendor/bin/charon
+vendor/bin/ipsec_mon
+vendor/bin/lbs_hidl_service
+vendor/bin/mnld
+vendor/bin/mtk_agpsd
+vendor/bin/starter
+vendor/bin/stroke
+vendor/etc/init/ipsec_mon.rc
+vendor/etc/init/lbs_hidl_service.rc
+vendor/etc/init/mtk_agpsd_p.rc
+vendor/etc/init/vendor.mediatek.hardware.gnss@1.1-service.rc
+vendor/etc/agps_profiles_conf2.xml
+vendor/etc/slp_conf
+vendor/lib/hw/flp.default.so
+vendor/lib/hw/gps.default.so
+vendor/lib/libDR.so
+vendor/lib/libcharon-ss.so
+vendor/lib/libgeofence.so
+vendor/lib/libhydra.so
+vendor/lib/libipsec_ims_shr.so
+vendor/lib/libmnl.so
+vendor/lib/libsimaka.so
+vendor/lib/libstrongswan.so
+vendor/lib64/hw/flp.default.so
+vendor/lib64/hw/gps.default.so
+vendor/lib64/hw/vendor.mediatek.hardware.gnss@1.1-impl.so
+vendor/lib64/lbs_hidl_service-impl.so
+vendor/lib64/libcharon-ss.so
+vendor/lib64/libhydra.so
+vendor/lib64/libipsec_ims_shr.so
+vendor/lib64/libsimaka.so
+vendor/lib64/libstrongswan.so
+vendor/lib64/vendor.mediatek.hardware.gnss@1.1.so
+vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # GPS (Certs)
 vendor/etc/ipsec/ipsec.d/cacerts/DigiCertGlobalRootCA.crt
@@ -546,11 +605,23 @@ vendor/lib/egl/egl.cfg
 vendor/lib/egl/libEGL_mtk.so
 vendor/lib/egl/libGLESv1_CM_mtk.so
 vendor/lib/egl/libGLESv2_mtk.so
+vendor/lib/libIMGegl.so
 vendor/lib/libOpenCL.so
+vendor/lib/libglslcompiler.so
+vendor/lib/libimsg_log.so
+vendor/lib/libsrv_um.so
+vendor/lib/libtqvalidate.so
+vendor/lib/libusc.so
 vendor/lib64/egl/libEGL_mtk.so
 vendor/lib64/egl/libGLESv1_CM_mtk.so
 vendor/lib64/egl/libGLESv2_mtk.so
+vendor/lib64/libIMGegl.so
 vendor/lib64/libOpenCL.so
+vendor/lib64/libglslcompiler.so
+vendor/lib64/libimsg_log.so
+vendor/lib64/libsrv_um.so
+vendor/lib64/libtqvalidate.so
+vendor/lib64/libusc.so
 
 # IMS (Vendor)
 vendor/bin/hw/vtservice_hidl
@@ -584,7 +655,7 @@ vendor/lib64/libwo.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # IMS - from treble.phh.me (android 12)
--priv-app/ImsService/ImsService.apk|a2ea43af16be841005db332184fa444a98206e3b
+-priv-app/ImsService/ImsService.apk
 
 # Jpeg
 vendor/bin/jpegtool
@@ -701,29 +772,29 @@ vendor/lib64/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.mtkcodecservice@1.1.so
 
 # NVRAM - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service|8f8b1c931ce4859f58867bf4bf320fcae47bb22b
-vendor/bin/atcid|c0137c01d46704fe0b7432a0257160245ffa51d6
-vendor/bin/nvram_daemon|256cbae6f6bdd89961c74a5fadf44e0fd90d661a
-vendor/etc/init/atcid.rc|001abe08dd220ae80e5ed4df3ef57ac90b98034f
-vendor/etc/init/nvram_daemon.rc|02c739c622f871b7ec801755f64d063eee91ba77
-vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc|328d76546b36b7f67f48dff0fad46a419188a7f7
-vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|6ce8eb984e7f821c79ea1fde8bd1470641b881fd
-vendor/lib/libcustom_nvram.so|75dea5ba3fe898dd1f2e0ebd4f6123ea62d1c52f
-vendor/lib/libnvram.so|a13182a5e7fe16b485524983ef2d0becbd107b1b
-vendor/lib/libnvram_daemon_callback.so|c5b93e48668d419573c7e9da0d72707575189ab5
-vendor/lib/libnvram_platform.so|a889e5cbdc198a4333dbb2c1fbb4144b150f20a0
-vendor/lib/libnvram_sec.so|664c662ddd716ba9988608d11b17b1c5f7131e46
-vendor/lib/vendor.mediatek.hardware.nvram@1.0.so|50f11bde5ef568117b73307af88970ed290ddbf2
-vendor/lib/vendor.mediatek.hardware.nvram@1.1.so|8e888c2f7f317062f2f4e71c75903b82fd1819a4
-vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so|f35f6ccad0584f3de90dce80fbf6a3fba75d8a66
-vendor/lib64/libcustom_nvram.so|c1b2b4f05399d5a1d47d8cd9fc27622e79e55a24
-vendor/lib64/libnvram.so|31d858956ba1a630b3ebbf2dfa961202db5db103
-vendor/lib64/libnvram_daemon_callback.so|b828b4d80ce2c48d8f42e5b6b96cf7750c0f567c
-vendor/lib64/libnvram_platform.so|7345d991c4a1a0e30251a298f880c48010a0417c
-vendor/lib64/libnvram_sec.so|afd74aedc4e105488aeeaf309b076be1631eeb34
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so|48a4f21323851cc7be7ce266dc3c8ae293e7b3ab
-vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so|d6fc7f16b33aa8a89ad5ab1c6e8f11ff00e7fadb
-vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so|59f418dad1e81a243873f60e73ff801c7445acde
+vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
+vendor/bin/atcid
+vendor/bin/nvram_daemon
+vendor/etc/init/atcid.rc
+vendor/etc/init/nvram_daemon.rc
+vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
+vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib/libcustom_nvram.so
+vendor/lib/libnvram.so
+vendor/lib/libnvram_daemon_callback.so
+vendor/lib/libnvram_platform.so
+vendor/lib/libnvram_sec.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
+vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
+vendor/lib64/libcustom_nvram.so
+vendor/lib64/libnvram.so
+vendor/lib64/libnvram_daemon_callback.so
+vendor/lib64/libnvram_platform.so
+vendor/lib64/libnvram_sec.so
+vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
+vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
@@ -853,8 +924,8 @@ vendor/lib64/vendor.mediatek.hardware.radio@3.8.so
 vendor/lib64/vendor.mediatek.hardware.radio@3.9.so
 
 # Radio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/libsysenv.so|9bcd41968251814c2209257173e02a8589fa8f04
-vendor/lib64/libsysenv.so|8faeff48161ab28d948256d543abdb2a8f08fa99
+vendor/lib/libsysenv.so
+vendor/lib64/libsysenv.so
 
 # Radio (Configs)
 etc/apdb/APDB_MT6765_S01__W1925:vendor/etc/apdb/APDB_MT6765_S01__W1925
@@ -925,10 +996,10 @@ vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
 vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
-# Vibrator - from Nokia/Ronin_00WW/RNN_sprout:11/RP1A.200720.011/00WW_1_100:user/release-keys
-vendor/bin/hw/android.hardware.vibrator-service.mediatek|6a99b17250dae08eeeb4a720df65ef61b0542021
-vendor/etc/init/vibrator-mtk-default.rc|63f7577081fc8aca1d3cae9a32a77021ff041796
--vendor/etc/vintf/manifest/vibrator-mtk-default.xml|1a42ecd34f950e3737c61247b2d1d85039643729
+# Vibrator
+vendor/bin/hw/android.hardware.vibrator@1.0-service
+vendor/etc/init/android.hardware.vibrator@1.0-service.rc
+-vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 
 # WiFi
 vendor/bin/hw/android.hardware.wifi@1.0-service-mediatek

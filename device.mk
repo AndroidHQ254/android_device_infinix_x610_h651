@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
+    audio_policy.stub \
     libaudiopreprocessing \
     libtinycompress \
     libtinycompress.vendor \
@@ -52,8 +53,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.1-service.clearkey
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -62,23 +63,29 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@1.1 \
+    android.hardware.gnss@1.1.vendor \
     libandroid_net \
     libcurl
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service \
+    android.hardware.health@2.0 \
+    libsuspend
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4.vendor
 
 # Display
@@ -91,10 +98,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0.vendor \
     libvulkan
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0 \
     android.hidl.allocator@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
@@ -132,6 +141,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+# Neutral Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.1.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -205,7 +218,6 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     fstab.mt6765 \
     ueventd.mt6765.rc \
-    set_zram.sh \
     partition_permission.sh \
     throttle.sh
 
@@ -219,6 +231,10 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
+# Screen dimens
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
@@ -226,6 +242,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
 # Thermal
@@ -236,10 +254,6 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1.vendor
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
 
 # VNDK
 PRODUCT_COPY_FILES += \
@@ -259,13 +273,13 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder-v28.so
 
 PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v30.so
+    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v28.so
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.4.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.3.vendor
+    android.hardware.wifi@1.0.vendor \
+    android.hardware.wifi.supplicant@1.0.vendor \
+    android.hardware.wifi.hostapd@1.0.vendor
 
 PRODUCT_PACKAGES += \
     libkeystore-engine-wifi-hidl \
