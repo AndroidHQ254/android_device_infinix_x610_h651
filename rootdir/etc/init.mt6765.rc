@@ -1,12 +1,11 @@
 # MTK platform .rc configure
-import /system/etc/init/init.safailnet.rc
 import /vendor/etc/init/hw/init.connectivity.rc
-import /vendor/etc/init/microtrust.rc
 import /vendor/etc/init/hw/init.mt6765.usb.rc
+import /FWUpgradeInit.rc
+import vendor/etc/init/hw/init.volte.rc
 import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
-import /vendor/etc/init/hw/init.ago.rc
 import /vendor/etc/init/hw/init.modem.rc
 
 on early-init
@@ -25,6 +24,9 @@ on init
     chown root system /dev/stune/io/tasks
     chmod 0664 /dev/stune/io/tasks
 
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
     # Temp Backward compatibility
     mkdir /mnt/vendor/protect_f 0771 system system
     mkdir /mnt/vendor/protect_s 0771 system system
@@ -38,6 +40,8 @@ on init
     mkdir /mnt/vendor/nvdata 0771 system system
     # Create CIP mount point
     mkdir /custom
+
+    mkdir /mnt/cd-rom 0000 system system
 
     # change lk_env permission
     chown root system /proc/lk_env
@@ -93,6 +97,8 @@ on charger
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
 
+    start servicemanager
+    start hwservicemanager
     start vendor.light-hal-2-0
 
 on fs
@@ -103,9 +109,14 @@ on fs
     write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
 
-on late-fs
-    start vendor.keymaster-3-0
-    start keymaster_attestation-1-1
+write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 160
+    write /proc/sys/vm/direct_swappiness 60
+    write /sys/kernel/mm/swap/vma_ra_enabled false
+    write /sys/block/zram0/disksize 2147483648
+
+    swapon_all /fstab.mt6765
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
@@ -117,9 +128,8 @@ on post-fs
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 1100"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "4 1100"
 
-    # Make sure we have the device encryption key
-    start vold
-    installkey /data
+    # Support legacy paths
+    symlink /sdcard /storage/sdcard0
 
     # change permission for engineer mode
     chown radio system /proc/freqhopping/dramc
@@ -145,61 +155,6 @@ on post-fs
 
     chown system system /mnt/vendor/protect_s
     chmod 0770 /mnt/vendor/protect_s
-
-    # create basic filesystem structure
-    mkdir /data/misc 01771 system misc
-    mkdir /data/misc/bluedroid 02770 bluetooth net_bt_stack
-    # Fix the access permissions and group ownership for 'bt_config.conf'
-    chmod 0660 /data/misc/bluedroid/bt_config.conf
-    chown bluetooth net_bt_stack /data/misc/bluedroid/bt_config.conf
-    mkdir /data/misc/bluetooth 0770 system system
-    mkdir /data/misc/keystore 0700 keystore keystore
-    mkdir /data/misc/gatekeeper 0700 system system
-    mkdir /data/misc/keychain 0771 system system
-    mkdir /data/misc/net 0750 root shell
-    mkdir /data/misc/radio 0770 system radio
-    mkdir /data/misc/sms 0770 system radio
-    mkdir /data/misc/zoneinfo 0775 system system
-    mkdir /data/misc/vpn 0770 system vpn
-    mkdir /data/misc/shared_relro 0771 shared_relro shared_relro
-    mkdir /data/misc/systemkeys 0700 system system
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/ethernet 0770 system system
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    mkdir /data/misc/user 0771 root root
-    mkdir /data/misc/perfprofd 0775 root root
-    # give system access to wpa_supplicant.conf for backup and restore
-    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
-    mkdir /data/local 0751 root root
-    mkdir /data/misc/media 0700 media media
-    mkdir /data/misc/vold 0700 root root
-
-    #change partition permission
-    exec /vendor/etc/partition_permission.sh
-
-    # Sensor
-    chmod 0666 /dev/hwmsensor
-    chmod 0666 /dev/gyroscope
-    chmod 0666 /dev/msensor
-    chmod 0666 /dev/gsensor
-    chmod 0666 /dev/als_ps
-    chmod 0666 /dev/humidity
-    chmod 0666 /dev/barometer
-
-    chown system system /dev/hwmsensor
-    chown system system /dev/msensor
-    chown system system /dev/gsensor
-    chown radio system /dev/als_ps
-    chown system system /dev/gyroscope
-    chown system system /dev/barometer
-    chown system system /dev/humidity
-
-    #BSP: add XWWYLHLYS-59 by tao.lan 2080925 start	
-    chmod 0666 /dev/tee0
-    chmod 0666 /dev/teei_fp
-    #BSP: add XWWYLHLYS-59 by tao.lan 20180925 end
 
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
@@ -314,9 +269,6 @@ on post-fs-data
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log_to_fs
 
     chmod 0666 /dev/pmem_multimedia
-
-    # watch dog kicker
-    # write /proc/wdk "0 20 30 0 1"
 
     # set ptmx group to non-root
     chown root radio /dev/ptmx
@@ -507,7 +459,7 @@ on post-fs-data
     chmod 0664 /dev/hdmitx
 
     # JPEG
-    #chmod 0444 /dev/mtk_jpeg
+    chmod 0444 /dev/mtk_jpeg
 
     # almk
     chmod 0440 /dev/mtk_almk
@@ -1096,12 +1048,6 @@ service meta_tst /vendor/bin/meta_tst
     group radio gps system wifi audio bluetooth media
     disabled
     oneshot
-
-service charger /bin/chargeonlymode
-    class charger
-    critical
-    group system graphics
-    seclabel u:r:healthd:s0
 
 # add loghidl client
 service loghidlsysservice /system/bin/loghidlsysservice

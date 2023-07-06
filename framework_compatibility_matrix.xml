@@ -9,7 +9,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
-        <version>1.0-3</version>
+        <version>1.0-1</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>widevine</instance>

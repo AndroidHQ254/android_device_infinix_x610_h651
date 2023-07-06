@@ -1,1 +1,10 @@
 allow init property_type:file { append create getattr map open read relabelto rename setattr unlink write };
+
+allow init shell_exec:file { read getattr map execute open };
+allow init vendor_file:dir { mounton };
+allow init proc_asound:file { getattr open read };
+allow init audio_device:chr_file { ioctl open read write };
+allow init audioserver:fd use;
+allow init audioserver:fifo_file write;
+allow init netutils_wrapper_exec:file { execute getattr read open };
+allow init metadata_block_device:blk_file ioctl;

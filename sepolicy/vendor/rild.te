@@ -1,2 +1,0 @@
-get_prop(rild, rild_ipv6_prop)
-set_prop(rild, rild_ipv6_prop)

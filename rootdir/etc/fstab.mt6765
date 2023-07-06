@@ -37,3 +37,4 @@
 /dev/block/platform/bootdevice/by-name/dtbo          /dtbo                     emmc     defaults          defaults
 /dev/block/platform/bootdevice/by-name/vbmeta        /vbmeta                   emmc     defaults          defaults
 /dev/block/platform/bootdevice/by-name/tkv           /tkv                      emmc     defaults          defaults
+/dev/block/zram0                                     none                      swap     defaults          zramsize=50%

@@ -10,12 +10,16 @@ ifeq ($(TARGET_DEVICE),x610_h651)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
-GATEKEEPER_SYMLINK += $(TARGET_OUT_VENDOR)/lib/hw/gatekeeper.default.so
-GATEKEEPER_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/gatekeeper.default.so
-$(GATEKEEPER_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf libSoftGatekeeper.so $@
+include $(CLEAR_VARS)
 
-ALL_DEFAULT_INSTALLED_MODULES += $(GATEKEEPER_SYMLINK)
+GATEKEEPER_SYMLINKS := $(TARGET_OUT_VENDOR)
+$(GATEKEEPER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating gatekeeper symlinks: $@"
+	@mkdir -p $@/lib/hw
+	@mkdir -p $@/lib64/hw
+	@ln -sf libSoftGatekeeper.so $@/lib/hw/gatekeeper.default.so
+	@ln -sf libSoftGatekeeper.so $@/lib64/hw/gatekeeper.default.so
+
+ALL_DEFAULT_INSTALLED_MODULES += $(GATEKEEPER_SYMLINKS)
 
 endif

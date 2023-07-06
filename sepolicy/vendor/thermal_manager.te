@@ -1,0 +1,1 @@
+allow thermal_manager thermalloadalgod:unix_stream_socket connectto;

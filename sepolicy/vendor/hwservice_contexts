@@ -1,2 +1,0 @@
-# Mediatek
-vendor.mediatek.hardware.apmonitor::IAPMonitorService               u:object_r:hal_apmonitor_hwservice:s0

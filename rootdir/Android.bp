@@ -33,13 +33,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.ago.rc",
-    src: "etc/init.ago.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.modem.rc",
     src: "etc/init.modem.rc",
     sub_dir: "init/hw",
@@ -67,22 +60,9 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "init.safailnet.rc",
-    src: "etc/init.safailnet.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
 // fstab
 prebuilt_etc {
     name: "fstab.mt6765",
     src: "etc/fstab.mt6765",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "fstab.enableswap",
-    src: "etc/fstab.enableswap",
     vendor: true,
 }

@@ -13,9 +13,6 @@ vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 vendor/lib64/libudf.so
 
-# APN
-etc/apns-conf.xml:product/etc/apns-conf.xml
-
 # Audio
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocompensationfilter_vendor.so
@@ -44,9 +41,9 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 
-# Audio - from Ulefone/Note_11P/Note_11P:11/RP1A.200720.011/2106051247:user/release-keys
-vendor/lib/libtinyxml.so|db901f50b694ec5791932685466ceafbd64567a5
-vendor/lib64/libtinyxml.so|b9f9790bd8704bb8d1aebc6ee78a125f7023d925
+# Audio - from full_x655f_h6211
+#vendor/lib/libtinyxml.so
+#vendor/lib64/libtinyxml.so
 
 # Audio (Bin)
 vendor/bin/audiocmdservice_atci
@@ -422,7 +419,7 @@ vendor/lib64/libfeature_lmv.so
 vendor/lib64/libfeature_rss.so
 
 # Charger
-bin/charger:bin/chargeonlymode
+#bin/charger:bin/chargeonlymode
 
 # Dfps
 vendor/bin/hw/vendor.mediatek.hardware.dfps@1.0-service
@@ -440,18 +437,19 @@ vendor/lib/libmtk_drvb.so
 vendor/lib64/libdrm.so
 vendor/lib64/libmtk_drvb.so
 
-# DRM (Hardware) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+# DRM (Hardware)
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 
-# DRM (Widevine) - from full_x655f_h6211-user 10 QP1A.190711.020 3471 release-keys
+# DRM (Widevine)
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
 # Display
-vendor/lib/hw/gralloc.default.so
+#vendor/lib/hw/gralloc.default.so
+#vendor/lib64/hw/gralloc.default.so
 vendor/lib/hw/gralloc.mt6765.so
 vendor/lib/hw/memtrack.mt6765.so
 vendor/lib/libdpframework.so
@@ -464,7 +462,6 @@ vendor/lib/libion_ulit.so
 vendor/lib/libmemtrack_GL.so
 vendor/lib/libminiui.so
 vendor/lib/libpixelflinger.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/gralloc.mt6765.so
 vendor/lib64/hw/hwcomposer.mt6765.so
 vendor/lib64/hw/memtrack.mt6765.so
@@ -611,6 +608,8 @@ vendor/lib/hw/libSoftGatekeeper.so
 vendor/lib/libimsg_log.so
 vendor/lib/libmtee.so
 vendor/lib/vendor.microtrust.hardware.capi@2.0.so
+vendor/lib64/hw/gatekeeper.default.so
+vendor/lib64/hw/gatekeeper.mt6765.so
 vendor/lib64/hw/libSoftGatekeeper.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libmtee.so
@@ -679,14 +678,16 @@ vendor/lib64/libjpeg-alpha_vendor.so
 # Keymaster
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
-vendor/lib/hw/keystore.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
-vendor/lib64/hw/keystore.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
+
+# Keystore
+vendor/lib/hw/keystore.mt6765.so
+vendor/lib64/hw/keystore.mt6765.so
 
 # Kmsetkey
 vendor/lib/hw/kmsetkey.default.so
@@ -802,6 +803,7 @@ vendor/etc/init/nvram_daemon.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib/libcustom_nvram.so
+vendor/lib/libhwm.so
 vendor/lib/libnvram.so
 vendor/lib/libnvram_daemon_callback.so
 vendor/lib/libnvram_platform.so
@@ -810,6 +812,7 @@ vendor/lib/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib/vendor.mediatek.hardware.nvram@1.1.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/libcustom_nvram.so
+vendor/lib64/libhwm.so
 vendor/lib64/libnvram.so
 vendor/lib64/libnvram_daemon_callback.so
 vendor/lib64/libnvram_platform.so
@@ -819,10 +822,11 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
+#vendor/lib/hw/power.default.so
+#vendor/lib64/hw/power.default.so
 vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.power@2.0-service.rc
-vendor/lib/hw/power.default.so
 vendor/lib/hw/power.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib/libmmprofile.so
@@ -830,7 +834,6 @@ vendor/lib/libperfctl_vendor.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
-vendor/lib64/hw/power.default.so
 vendor/lib64/hw/power.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.power@2.0-impl.so
 vendor/lib64/libmmprofile.so
@@ -972,18 +975,16 @@ vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 
 # Sensors
+#vendor/lib/libsensorndkbridge.so
+#vendor/lib64/libsensorndkbridge.so
 vendor/bin/hw/android.hardware.sensors@1.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc
 vendor/lib/libfile_op.so
-vendor/lib/libhwm.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib64/hw/android.hardware.sensors@1.0-impl-mediatek.so
 vendor/lib64/hw/sensors.mt6765.so
 vendor/lib64/libfile_op.so
-vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/libsensor_custom.so
-vendor/lib64/libsensorndkbridge.so
 
 # Thermal
 -vendor/app/MTKThermalManager/MTKThermalManager.apk
@@ -1057,7 +1058,9 @@ vendor/bin/wmt_loopback
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/ams_aal_config.xml
 vendor/etc/power_whitelist_cfg.xml
+vendor/lib/libakm09918_x610.so
 vendor/lib/libmrdumpv.so
+vendor/lib64/libakm09918_x610.so
 vendor/lib64/libmrdumpv.so
 vendor/lib64/libui_ext.so
 

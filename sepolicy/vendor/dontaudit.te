@@ -1,0 +1,46 @@
+dontaudit {
+    bootanim
+    surfaceflinger
+    zygote
+ } vendor_file:file { execute getattr open read };
+
+dontaudit init {
+    netutils_wrapper_exec
+    shell_exec
+    system_file
+    vendor_file
+}:file execute_no_trans;
+
+dontaudit vendor_init {
+    wifi_data_file
+    wpa_socket
+}:dir setattr;
+
+dontaudit {
+    audioserver
+    hwservicemanager
+    init
+    mtk_hal_camera
+    system_server
+}init:binder { call transfer };
+
+dontaudit {
+    init
+    mtk_agpsd
+    mtk_hal_camera
+} default_android_hwservice:hwservice_manager { add find };
+
+dontaudit init {
+    hal_audio_hwservice
+    hal_gnss_hwservice
+    hal_power_hwservice
+    mtk_hal_power_hwservice
+}:hwservice_manager { add find };
+
+dontaudit init vndservicemanager:binder { call transfer };
+dontaudit vendor_init system_data_file:dir { add_name create setattr write };
+dontaudit vold persist_data_file:dir { ioctl read open };
+dontaudit init vndbinder_device:chr_file { ioctl read write open };
+dontaudit init audioserver:binder { transfer };
+#dontaudit init hwservice_manager:binder {call};
+dontaudit init hidl_base_hwservice:hwservice_manager add;

@@ -1,0 +1,8 @@
+allow mtk_hal_camera vendor_data_file:file { create getattr read write };
+allow mtk_hal_camera vendor_data_file:dir write;
+
+allow mtk_hal_camera data_skin_cfg_file:dir { read write add_name search open };
+allow mtk_hal_camera data_skin_cfg_file:file { read write create open getattr };
+
+allow mtk_hal_camera vendor_westalgo_data_file:dir { read write add_name search open };
+allow mtk_hal_camera vendor_westalgo_data_file:file { read write create getattr open };
